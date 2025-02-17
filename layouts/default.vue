@@ -1,14 +1,9 @@
 <template>
   <div>
     <header>
-      <h1>My Nuxt App</h1>
-      <nav>
-        <NuxtLink to="/">Home</NuxtLink> |
-        <NuxtLink to="/about">About</NuxtLink>
-        <ThemeToggle />
-      </nav>
+      <Navbar />
     </header>
-    <main>
+    <main class="container mx-auto my-36">
       <slot />
     </main>
   </div>
