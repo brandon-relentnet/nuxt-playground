@@ -14,5 +14,6 @@ export const useCounterStore = defineStore('counter', {
         reset() {
             this.count = 0
         }
-    }
+    },
+    persist: true
 })
