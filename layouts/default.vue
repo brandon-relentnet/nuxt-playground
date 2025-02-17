@@ -5,6 +5,7 @@
       <nav>
         <NuxtLink to="/">Home</NuxtLink> |
         <NuxtLink to="/about">About</NuxtLink>
+        <ThemeToggle />
       </nav>
     </header>
     <main>
