@@ -36,58 +36,63 @@ const closeDropdown = () => {
 
 <template>
   <nav
-    class="bg-base text-text p-4 flex justify-end items-center fixed top-0 left-0 w-full space-x-2 font-semibold"
+    class="bg-base text-text h-20 flex justify-between items-center px-4 fixed top-0 left-0 w-full font-semibold z-50"
   >
-    <div
-      v-for="link in navLinks"
-      :key="link.text"
-      class="relative inline-block"
-    >
+    <div class="flex justify-center items-center space-x-2 w-full">
       <div
-        v-if="link.children"
-        @mouseenter="openDropdown(link.text)"
-        @mouseleave="closeDropdown"
+        v-for="link in navLinks"
+        :key="link.text"
+        class="relative inline-block"
       >
-        <NuxtLink
-          :to="link.link"
-          class="hover:bg-surface rounded-xl px-4 py-2 transition-colors duration-200 cursor-pointer"
-          activeClass="bg-surface"
-          :aria-expanded="activeDropdown === link.text"
-          aria-haspopup="true"
-        >
-          {{ link.text }} <PlayIcon class="size-3 inline-block -rotate-90 transition duration-200"
-          :class="{
-            'rotate-90': activeDropdown === link.text,
-          }" />
-        </NuxtLink>
         <div
-          class="absolute left-0 mt-4 bg-surface rounded-xl overflow-hidden transition-all duration-200 ease-in-out"
-          :class="{
-            'opacity-100 translate-y-0 pointer-events-auto':
-              activeDropdown === link.text,
-            'opacity-0 translate-y-1 pointer-events-none':
-              activeDropdown !== link.text,
-          }"
+          v-if="link.children"
+          @mouseenter="openDropdown(link.text)"
+          @mouseleave="closeDropdown"
         >
           <NuxtLink
-            v-for="child in link.children"
-            :key="child.text"
-            :to="child.link"
-            activeClass="bg-overlay"
-            class="block px-4 py-3 hover:bg-overlay transition whitespace-nowrap"
+            :to="link.link"
+            class="hover:bg-surface rounded-xl px-4 py-2 transition-colors duration-200 cursor-pointer"
+            activeClass="bg-surface"
+            :aria-expanded="activeDropdown === link.text"
+            aria-haspopup="true"
           >
-            {{ child.text }}
+            {{ link.text }}
+            <PlayIcon
+              class="size-3 inline-block -rotate-90 transition duration-200"
+              :class="{
+                'rotate-90': activeDropdown === link.text,
+              }"
+            />
           </NuxtLink>
+          <div
+            class="absolute left-0 mt-4 bg-surface rounded-xl overflow-hidden transition-all duration-200 ease-in-out"
+            :class="{
+              'opacity-100 translate-y-0 pointer-events-auto':
+                activeDropdown === link.text,
+              'opacity-0 translate-y-1 pointer-events-none':
+                activeDropdown !== link.text,
+            }"
+          >
+            <NuxtLink
+              v-for="child in link.children"
+              :key="child.text"
+              :to="child.link"
+              activeClass="bg-overlay"
+              class="block px-4 py-3 hover:bg-overlay transition whitespace-nowrap"
+            >
+              {{ child.text }}
+            </NuxtLink>
+          </div>
         </div>
+        <NuxtLink
+          v-else
+          :to="link.link"
+          activeClass="bg-surface"
+          class="hover:bg-surface rounded-xl px-4 py-2 transition-colors duration-200 cursor-pointer"
+        >
+          {{ link.text }}
+        </NuxtLink>
       </div>
-      <NuxtLink
-        v-else
-        :to="link.link"
-        activeClass="bg-surface"
-        class="hover:bg-surface rounded-xl px-4 py-2 transition-colors duration-200 cursor-pointer"
-      >
-        {{ link.text }}
-      </NuxtLink>
     </div>
     <ThemeToggle />
   </nav>
