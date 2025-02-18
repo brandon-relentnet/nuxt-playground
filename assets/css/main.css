@@ -7,7 +7,7 @@
     --color-surface: #1a1a1e;
     --color-overlay: #202024;
     --color-text: #ffffff;
-    --color-subtle: #e0e0e0;
+    --color-subtle: #c2c2c2;
     --color-muted: #a0a0a0;
     --color-foam: #56a7db;
 
@@ -36,7 +36,6 @@
 html {
     background-color: var(--color-base);
     color: var(--color-text);
-    transition: all 0.3s ease-in-out;
 }
 
 /** Background Masks **/
