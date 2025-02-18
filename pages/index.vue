@@ -4,5 +4,7 @@
     <SectionsOurServices />
     <SectionsOurForte />
     <SectionsTeamInfo />
+    <SectionsTheDifference />
+    <SectionsSimplifyOnline />
   </div>
 </template>

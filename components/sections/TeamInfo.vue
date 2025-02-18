@@ -25,7 +25,7 @@ const teamMembers = [
 </script>
 
 <template>
-  <section class="relative bg-surface">
+  <section id="team-info" class="relative bg-surface">
     <span class="bg-mask-right" />
     <div class="container relative mx-auto px-4 py-section">
       <div class="text-center lg:w-1/2 mx-auto py-block px-4">

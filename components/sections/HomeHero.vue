@@ -13,7 +13,6 @@ const scrollToNextSection = () => {
   const nextSectionEl = document.getElementById('your-success');
   nextSectionEl?.scrollIntoView({ behavior: 'smooth' });
 };
-
 </script>
 
 <template>
