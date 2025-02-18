@@ -1,6 +1,7 @@
 <template>
   <div>
-    <HomeHero />
-    <YourSuccess />
+    <SectionsHomeHero />
+    <SectionsYourSuccess />
+    <SectionsRevolutionizingWeb />
   </div>
 </template>

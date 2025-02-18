@@ -35,3 +35,23 @@ html {
     color: var(--color-text);
     transition: all 0.3s ease-in-out;
 }
+
+/** Background Masks **/
+.bg-mask-right {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyAgZmlsbD0iIzFhMWExZSIgdmlld0JveD0iMCAwIDE5MjAgMTQ0MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cG9seWdvbiBwb2ludHM9IjE5MjAgOTguNDkgMTU2OCA3NzYuMDUgMTE2NC44MyAwIDAgMCAwIDE0NDAgMTMzMS40NCAxNDQwIDE5MjAgMzA3LjA3IDE5MjAgOTguNDkiLz48L3N2Zz4=);
+    background-size: calc(100% + 2px) calc(100% + 2px);
+    background-color: var(--color-base);
+    background-position: 50%;
+}
+
+.bg-mask-left {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyAgZmlsbD0iIzFhMWExZSIgdmlld0JveD0iMCAwIDE5MjAgMTkyMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gc2xpY2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0ODQuNjcsMTA2OC42Myw5MjkuNTEsMEgxOTIwVjIzMC42N1pNMTkyMCw0MzkuNTYsMTE1MC45LDE5MjBIMTkyMFoiLz48L3N2Zz4=);
+    background-size: cover;
+    transform: scale(-1, 1);
+    background-position: right 0px center;
+}
+
+.bg-mask-right,
+.bg-mask-left {
+    @apply inset-0 absolute overflow-hidden bg-no-repeat;
+}
