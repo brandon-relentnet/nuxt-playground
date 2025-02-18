@@ -3,7 +3,7 @@
     <header>
       <Navbar />
     </header>
-    <main class="container mx-auto my-36">
+    <main class="container mx-auto my-36 h-screen">
       <slot />
     </main>
   </div>

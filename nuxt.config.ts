@@ -9,5 +9,9 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
-  modules: ["@pinia/nuxt", "@vueuse/nuxt", "pinia-plugin-persistedstate/nuxt"],
+  modules: [
+    "@pinia/nuxt",
+    "@vueuse/nuxt",
+    "pinia-plugin-persistedstate/nuxt",
+  ],
 });
