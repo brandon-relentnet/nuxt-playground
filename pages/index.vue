@@ -1,7 +1,8 @@
 <template>
   <div>
     <SectionsHomeHero />
-    <SectionsYourSuccess />
-    <SectionsRevolutionizingWeb />
+    <SectionsOurServices />
+    <SectionsOurForte />
+    <SectionsTeamInfo />
   </div>
 </template>
