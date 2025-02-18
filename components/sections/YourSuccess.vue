@@ -57,16 +57,16 @@ const servicesProvided = [
 </script>
 
 <template>
-  <section id="your-success" class="relative">
+  <section id="your-success" class="relative bg-surface">
     <span
       class="bg-mask-right"
     />
-    <div class="container relative mx-auto py-[6vw]">
-      <div class="w-1/2 text-center mx-auto py-[3vw]">
+    <div class="container relative mx-auto py-section px-4">
+      <div class="md:w-1/2 text-center mx-auto py-block">
         <span class="text-sm text-rose font-semibold tracking-widest"
           >SERVICES</span
         >
-        <h2 class="text-5xl font-bold mt-6">Your Success, Our Commitment</h2>
+        <h2 class="text-5xl font-bold mt-6">Your success, our <span class="italic">commitment</span>.</h2>
         <p class="text-subtle text-lg mt-4">
           We bring ideas to life with stunning websites, powerful apps, and
           strategic online growth. Whether you need a new digital home,
@@ -96,12 +96,12 @@ const servicesProvided = [
           />
         </NuxtLink>
       </div>
-      <div class="flex justify-center pb-[3vw]">
+      <div class="flex justify-center pb-block">
         <NuxtLink
           to="/services"
           class="group mt-12 inline-block bg-linear-to-r from-rose to-foam text-text px-8 py-4 rounded-xl font-semibold hover:scale-105 transition duration-200 cursor-pointer active:scale-95"
         >
-          Explore All Services
+          See all we offer
           <PlayIcon
             class="size-3 -mt-0.5 inline-block group-hover:rotate-360 transition duration-200 text-text"
           />

@@ -10,6 +10,9 @@
     --color-subtle: #e0e0e0;
     --color-muted: #a0a0a0;
     --color-foam: #56a7db;
+
+    --spacing-section: 6vw;
+    --spacing-block: 3vw;
 }
 
 [data-theme="light"] {
@@ -53,5 +56,5 @@ html {
 
 .bg-mask-right,
 .bg-mask-left {
-    @apply inset-0 absolute overflow-hidden bg-no-repeat;
+    @apply inset-0 absolute overflow-hidden bg-no-repeat lg:visible invisible;
 }

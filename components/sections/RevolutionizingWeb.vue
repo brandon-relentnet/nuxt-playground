@@ -58,56 +58,33 @@ const servicesProvided = [
 
 <template>
   <section
-    id="your-success"
-    class="relative scroll-m-26 overflow-hidden bg-base">
-    <span
-      class="bg-mask-left"
-    ></span>
-    <div class="container relative mx-auto py-42">
-      <div class="w-1/2 text-center mx-auto mb-16">
-        <span class="text-sm text-rose font-semibold tracking-widest"
-          >SERVICES</span
-        >
-        <h2 class="text-5xl font-bold mt-6">Your Success, Our Commitment</h2>
-        <p class="text-subtle text-lg mt-4">
-          We bring ideas to life with stunning websites, powerful apps, and
-          strategic online growth. Whether you need a new digital home,
-          marketing that converts, or reliable hosting and support, we’re here
-          to make it happen.
-        </p>
-      </div>
-
-      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <NuxtLink
-          v-for="service in servicesProvided"
-          :key="service.name"
-          :to="service.link"
-          class="flex group items-center shadow-md hover:shadow-foam/30 hover:shadow-lg justify-between space-x-4 bg-overlay p-6 rounded-xl border-2 border-transparent hover:border-foam/30 active:border-foam transition duration-200 cursor-pointer"
-        >
-          <div class="flex items-center space-x-4">
-            <component :is="service.icon" class="size-8 text-rose" />
-            <div>
-              <h3 class="text-2xl font-semibold mb-2">{{ service.name }}</h3>
-              <p class="text-subtle max-w-[30ch]">
-                {{ service.description }}
-              </p>
-            </div>
-          </div>
-          <ArrowRightIcon
-            class="size-6 text-subtle group-hover:text-rose transition duration-200"
-          />
-        </NuxtLink>
-      </div>
-      <div class="flex justify-center">
-        <NuxtLink
-          to="/services"
-          class="group mt-12 inline-block bg-linear-to-r from-rose to-foam text-text px-8 py-4 rounded-xl font-semibold hover:scale-105 transition duration-200 cursor-pointer active:scale-95"
-        >
-          Explore All Services
-          <PlayIcon
-            class="size-3 -mt-0.5 inline-block group-hover:rotate-360 transition duration-200 text-text"
-          />
-        </NuxtLink>
+    class="relative bg-base"
+  >
+    <span class="bg-mask-left"></span>
+    <div class="container relative mx-auto px-4 py-section">
+      <div class="flex flex-col lg:flex-row items-center justify-center lg:space-x-12 py-block">
+        <NuxtImg
+          src="/images/software-33.png"
+          class="md:w-1/2 h-full object-cover"
+        </NuxtImg>
+        <div class="lg:w-1/3 text-left">
+          <span class="text-sm text-rose font-semibold tracking-widest"
+            >FORTE</span
+          >
+          <h2 class="text-5xl font-bold mt-6">Revolutionizing the web with <span class="italic">relentless</span> results.</h2>
+          <p class="text-subtle text-lg mt-4">
+            In a rapidly evolving digital landscape, RelentNet combines innovation, creativity, and technical expertise to deliver web solutions that drive business growth. That’s why we approach every project with relentless determination to deliver exceptional results. Our team of experts combines innovation, creativity, and technical prowess to provide you with web services that stand out in the online world. With RelentNet, you’re not just getting web services; you’re getting a partner committed to achieving relentless success for your online presence.
+          </p>
+          <NuxtLink
+            to="/about"
+            class="group mt-12 inline-block bg-linear-to-r from-rose to-foam text-text px-8 py-4 rounded-xl font-semibold hover:scale-105 transition duration-200 cursor-pointer active:scale-95"
+          >
+            Learn about us
+            <PlayIcon
+              class="size-3 -mt-0.5 inline-block group-hover:rotate-360 transition duration-200 text-text"
+            />
+          </NuxtLink>
+        </div>
       </div>
     </div>
   </section>
