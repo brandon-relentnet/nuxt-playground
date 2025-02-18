@@ -6,5 +6,6 @@
     <SectionsTeamInfo />
     <SectionsTheDifference />
     <SectionsSimplifyOnline />
+    <SectionsContactCTA />
   </div>
 </template>

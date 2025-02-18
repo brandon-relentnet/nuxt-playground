@@ -57,7 +57,7 @@ const servicesProvided = [
 </script>
 
 <template>
-  <section id="your-success" class="relative bg-surface">
+  <section id="our-services" class="relative bg-surface">
     <span
       class="bg-mask-right"
     />

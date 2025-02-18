@@ -75,7 +75,7 @@ const theDifferences = [
             to="/services"
             class="group mt-12 inline-block bg-linear-to-r from-rose to-foam text-text px-8 py-4 rounded-xl font-semibold hover:scale-105 transition duration-200 cursor-pointer active:scale-95"
           >
-            More about us
+            The <span class="italic">most</span> about us
             <PlayIcon
               class="size-3 -mt-0.5 inline-block group-hover:rotate-360 transition duration-200 text-text"
             />

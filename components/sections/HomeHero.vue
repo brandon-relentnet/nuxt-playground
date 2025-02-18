@@ -10,7 +10,7 @@ const parallaxStyle = computed(() => ({
 }));
 
 const scrollToNextSection = () => {
-  const nextSectionEl = document.getElementById('your-success');
+  const nextSectionEl = document.getElementById('our-services');
   nextSectionEl?.scrollIntoView({ behavior: 'smooth' });
 };
 </script>
