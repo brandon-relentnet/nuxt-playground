@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import { PlayIcon } from "@heroicons/vue/24/solid";
 
 const navLinks = [
   { text: "Home", link: "/" },
@@ -8,9 +9,11 @@ const navLinks = [
     text: "Services",
     link: "/services",
     children: [
-      { text: "Website Development", link: "/services/webdesign" },
+      { text: "Website Development", link: "/services/website-development" },
       { text: "App Development", link: "/services/app-development" },
       { text: "SEO", link: "/services/seo" },
+      { text: "Self Hosting", link: "/services/self-hosting" },
+      { text: "Support Packages", link: "/services/support-packages" },
     ],
   },
   { text: "Contact", link: "/contact" },
@@ -45,15 +48,20 @@ const closeDropdown = () => {
         @mouseenter="openDropdown(link.text)"
         @mouseleave="closeDropdown"
       >
-        <NavbarItem
-          :text="link.text"
-          :link="link.link"
-          :key="link.text"
+        <NuxtLink
+          :to="link.link"
+          class="hover:bg-surface rounded-xl px-4 py-2 transition-colors duration-200 cursor-pointer"
+          activeClass="bg-surface"
           :aria-expanded="activeDropdown === link.text"
           aria-haspopup="true"
-        />
+        >
+          {{ link.text }} <PlayIcon class="size-3 inline-block -rotate-90 transition duration-200"
+          :class="{
+            'rotate-90': activeDropdown === link.text,
+          }" />
+        </NuxtLink>
         <div
-          class="absolute left-0 mt-4 bg-base border border-text rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out"
+          class="absolute left-0 mt-4 bg-surface rounded-xl overflow-hidden transition-all duration-200 ease-in-out"
           :class="{
             'opacity-100 translate-y-0 pointer-events-auto':
               activeDropdown === link.text,
@@ -61,16 +69,25 @@ const closeDropdown = () => {
               activeDropdown !== link.text,
           }"
         >
-          <NavbarItem
+          <NuxtLink
             v-for="child in link.children"
             :key="child.text"
-            :text="child.text"
-            :link="child.link"
-            class="block"
-          />
+            :to="child.link"
+            activeClass="bg-overlay"
+            class="block px-4 py-3 hover:bg-overlay transition whitespace-nowrap"
+          >
+            {{ child.text }}
+          </NuxtLink>
         </div>
       </div>
-      <NavbarItem v-else :text="link.text" :key="link.text" :link="link.link" />
+      <NuxtLink
+        v-else
+        :to="link.link"
+        activeClass="bg-surface"
+        class="hover:bg-surface rounded-xl px-4 py-2 transition-colors duration-200 cursor-pointer"
+      >
+        {{ link.text }}
+      </NuxtLink>
     </div>
     <ThemeToggle />
   </nav>
