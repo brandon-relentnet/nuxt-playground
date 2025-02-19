@@ -12,7 +12,7 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/vue/24/solid";
         />
       </div>
       <div class="gap-y-4">
-        <h4 class="text-xl text-rose font-semibold tracking-widest uppercase">Quick Links</h4>
+        <SectionTitle>Quick Links</SectionTitle>
         <ul class="gap-y-2">
           <li>
             <NuxtLink to="/" class="hover:text-rose transition duration-200">
@@ -46,7 +46,7 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/vue/24/solid";
         </ul>
       </div>
       <div class="gap-y-4">
-        <h4 class="text-xl text-rose font-semibold tracking-widest uppercase">Contact</h4>
+        <SectionTitle>Contact</SectionTitle>
         <ul class="gap-y-2">
           <li class="flex items-center gap-x-2">
             <MapPinIcon class="size-5 text-rose" />
@@ -63,7 +63,7 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/vue/24/solid";
         </ul>
       </div>
       <div class="gap-y-4">
-        <h4 class="text-xl text-rose font-semibold tracking-widest uppercase">Policies</h4>
+        <SectionTitle>Policies</SectionTitle>
         <ul class="gap-y-2 text-subtle">
           <li>
             <NuxtLink to="/policies/cloud-based-contracts" class="hover:text-rose transition duration-200">

@@ -1,7 +1,6 @@
 <script setup>
 import { useWindowScroll } from "@vueuse/core";
 import { ref, computed, onMounted } from "vue";
-import { PlayIcon } from "@heroicons/vue/24/solid";
 
 const { y } = useWindowScroll();
 const imageRef = ref(null);
@@ -10,11 +9,6 @@ const imageVisible = ref(false);
 const parallaxStyle = computed(() => ({
   transform: `translateY(-${y.value * 0.3}px)`,
 }));
-
-const scrollToNextSection = () => {
-  const nextSectionEl = document.getElementById("our-services");
-  nextSectionEl?.scrollIntoView({ behavior: "smooth" });
-};
 
 onMounted(() => {
   setTimeout(() => {

@@ -65,7 +65,7 @@
 
       <h2 class="text-2xl font-semibold mt-6 mb-2">5. Payment Terms</h2>
       <p class="mb-4">
-        <strong>Fees:</strong> The total fee for the project is detailed in the proposal. A deposit of [Insert Percentage]% is due upon signing this Agreement, with subsequent payments tied to the completion of established milestones.
+        <strong>Fees:</strong> The total fee for the project is detailed in the proposal. An agreed deposit % is due upon signing this Agreement, with subsequent payments tied to the completion of established milestones.
       </p>
       <p class="mb-4">
         <strong>Late Payment:</strong> Late payments may incur additional fees as detailed in the proposal.

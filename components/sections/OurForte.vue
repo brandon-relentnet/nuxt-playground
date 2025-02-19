@@ -1,27 +1,21 @@
-<script setup>
-import { PlayIcon } from "@heroicons/vue/24/solid";
-</script>
-
 <template>
-  <section class="relative bg-base">
+  <section class="relative bg-base py-section">
     <span class="bg-mask-left"></span>
-    <div class="container relative mx-auto px-4 py-section">
+    <div class="container relative mx-auto px-4 py-block">
       <div
-        class="flex flex-col lg:flex-row items-center justify-center lg:gap-x-12 py-block"
+        class="flex flex-col lg:flex-row items-center justify-center lg:gap-x-12"
       >
         <NuxtImg
           src="/images/software-33.png"
           class="md:w-1/2 h-full object-cover"
         />
         <div class="lg:w-1/3 text-left">
-          <span class="text-sm text-rose font-semibold tracking-widest"
-            >FORTE</span
-          >
-          <h2 class="text-5xl font-bold mt-6">
+          <SectionTitle>Forte</SectionTitle>
+          <h2 class="text-5xl font-bold mb-6">
             Revolutionizing the web with
             <span class="italic">relentless</span> results.
           </h2>
-          <p class="text-subtle text-lg mt-4">
+          <p class="text-subtle">
             In a rapidly evolving digital landscape, RelentNet combines
             innovation, creativity, and technical expertise to deliver web
             solutions that drive business growth. That’s why we approach every

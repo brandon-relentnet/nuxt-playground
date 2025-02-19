@@ -1,5 +1,4 @@
 <script setup>
-import { PlayIcon } from "@heroicons/vue/24/solid";
 const teamMembers = [
   {
     name: "Brandon Harris",
@@ -26,24 +25,22 @@ const teamMembers = [
 </script>
 
 <template>
-  <section id="team-info" class="relative bg-surface">
+  <section id="team-info" class="relative bg-surface py-section">
     <span class="bg-mask-right" />
-    <div class="container relative mx-auto px-4 py-section">
-      <div class="text-center lg:w-1/2 mx-auto py-block px-4">
-        <span class="text-sm text-rose font-semibold tracking-widest"
-          >PEOPLE</span
-        >
-        <h2 class="text-5xl font-bold mt-6">
+    <div class="container relative mx-auto px-4 py-block">
+      <div class="text-center lg:w-1/2 mx-auto px-4 mb-12">
+        <SectionTitle>People</SectionTitle>
+        <h2 class="text-5xl font-bold mb-6">
           The <span class="italic">relentless</span> individuals.
         </h2>
-        <p class="text-subtle text-lg mt-4">
+        <p class="text-subtle max-w-[80ch] mb-4">
           We are a team of dedicated professionals committed to delivering
           excellence in web development, design, and digital marketing. With a
           passion for innovation and a focus on results, we work collaboratively
           to bring your online vision to life.
         </p>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 place-content-center">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 place-content-center mb-8">
         <div
           v-for="(member, index) in teamMembers"
           :key="index"
@@ -57,7 +54,7 @@ const teamMembers = [
           </div>
         </div>
       </div>
-      <div class="flex justify-center py-block">
+      <div class="flex justify-center">
         <MotionButton scrollTo="the-difference"
           ><span class="italic">More</span> about us </MotionButton
         >

@@ -38,6 +38,14 @@ html {
     color: var(--color-text);
 }
 
+/** Typography **/
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.section-title {
+    font-family: 'AdamBold', sans-serif;
+}
+
 /** Background Masks **/
 .bg-mask-right {
     background-image: url(data:image/svg+xml;base64,PHN2ZyAgZmlsbD0iIzFhMWExZSIgdmlld0JveD0iMCAwIDE5MjAgMTQ0MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cG9seWdvbiBwb2ludHM9IjE5MjAgOTguNDkgMTU2OCA3NzYuMDUgMTE2NC44MyAwIDAgMCAwIDE0NDAgMTMzMS40NCAxNDQwIDE5MjAgMzA3LjA3IDE5MjAgOTguNDkiLz48L3N2Zz4=);

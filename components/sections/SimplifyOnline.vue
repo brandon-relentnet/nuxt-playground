@@ -3,40 +3,36 @@ import { PlayIcon } from "@heroicons/vue/24/solid";
 </script>
 
 <template>
-  <section class="relative bg-surface">
+  <section class="relative bg-surface py-section">
     <span class="bg-mask-right"></span>
-    <div class="container relative mx-auto px-4 py-section">
+    <div class="container relative mx-auto px-4 py-block">
       <div
-        class="flex flex-col lg:flex-row items-center justify-center lg:gap-x-12 py-block"
+        class="flex flex-col lg:flex-row items-center justify-center lg:gap-x-12"
       >
         <div class="lg:w-1/3 text-left">
-          <span class="text-sm text-rose font-semibold tracking-widest"
-            >MANAGE</span
-          >
-          <h2 class="text-5xl font-bold mt-6">
+          <SectionTitle>Manage</SectionTitle>
+          <h2 class="text-5xl font-bold mb-6">
             <span class="italic">Simplify</span> your online management.
           </h2>
-          <p class="text-subtle text-lg mt-4 mb-20">
+          <p class="text-subtle mb-12">
             RelentNet’s all-in-one website management platform simplifies your
             digital operations, from design and development to hosting, updates,
             and ongoing support. From design and development to hosting and
             updates, we provide a seamless experience that puts everything you
             need at your fingertips.
           </p>
-          <span class="text-sm text-rose font-semibold tracking-widest"
-            >FEATURES</span
-          >
-          <p class="text-subtle text-lg mt-6">
+          <SectionTitle>Benefits</SectionTitle>
+          <p class="text-subtle mb-4">
             <strong>- Centralized Control</strong><br />Manage all aspects of
             your website from a single, user-friendly dashboard, saving you time
             and effort.
           </p>
-          <p class="text-subtle text-lg mt-4">
+          <p class="text-subtle mb-4">
             <strong>- Comprehensive Tools</strong><br />Access a full suite of
             tools for design, content management, e-commerce, analytics, and
             more, all in one place.
           </p>
-          <p class="text-subtle text-lg mt-4">
+          <p class="text-subtle">
             <strong>- 24/7 Support</strong><br />Our dedicated team is always
             available to assist with any issues or questions, ensuring your site
             runs smoothly.

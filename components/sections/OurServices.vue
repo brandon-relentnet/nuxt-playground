@@ -6,8 +6,7 @@ import {
   MegaphoneIcon,
   ServerStackIcon,
   WrenchScrewdriverIcon,
-  ArrowRightIcon,
-  PlayIcon,
+  ArrowRightIcon
 } from "@heroicons/vue/24/solid";
 
 const servicesProvided = [
@@ -61,10 +60,8 @@ const servicesProvided = [
     <span class="bg-mask-right" />
     <div class="container relative mx-auto py-section px-4">
       <div class="md:w-2/3 text-center mx-auto py-block">
-        <span class="text-sm text-rose font-semibold tracking-widest section-title"
-          >SERVICES</span
-        >
-        <h2 class="text-5xl font-bold mt-6">
+        <SectionTitle>Services</SectionTitle>
+        <h2 class="text-5xl font-bold">
           Your success, our <span class="italic">commitment</span>.
         </h2>
         <p class="text-subtle mt-4 max-w-[80ch] mx-auto">
@@ -104,10 +101,7 @@ const servicesProvided = [
 </template>
 
 <style scoped>
-.section-title {
-  font-family: 'AdamBold', sans-serif;
-}
 div {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 </style>
