@@ -1,5 +1,8 @@
 <template>
-    <span class="text-sm text-rose font-semibold tracking-widest section-title uppercase mb-4 inline-block">
-        <slot />
-    </span>
+  <span
+    class="text-sm text-rose font-bold tracking-widest uppercase mb-4 inline-block"
+    style="font-family: 'AdamBold', sans-serif;"
+  >
+    <slot />
+  </span>
 </template>

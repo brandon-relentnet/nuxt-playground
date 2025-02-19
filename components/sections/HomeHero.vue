@@ -18,7 +18,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative h-[112vh] w-full bg-rose overflow-hidden font-adam">
+  <div class="relative h-[112vh] w-full bg-rose overflow-hidden">
     <div
       ref="imageRef"
       class="absolute top-[10%] left-0 w-full h-[120%] transition-transform duration-[1200ms] ease-out"
@@ -46,10 +46,6 @@ onMounted(() => {
 </template>
 
 <style scoped>
-div {
-  font-family: "Poppins", sans-serif;
-}
-
 @keyframes slideMask {
   from {
     transform: translateX(-100%);

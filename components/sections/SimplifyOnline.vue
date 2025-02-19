@@ -39,9 +39,9 @@ import { PlayIcon } from "@heroicons/vue/24/solid";
           </p>
           <NuxtLink
             v-motion-button
-            id="start-hidden"
             to="https://control.relentnet.com/index.php?rp=/login"
             class="group mt-12 inline-block bg-linear-to-r from-rose to-foam text-text px-6 py-3 text-lg rounded-xl tracking-widest font-bold cursor-pointer"
+            style="font-family: 'AdamBold', sans-serif"
           >
             Access your account
             <PlayIcon
@@ -57,10 +57,3 @@ import { PlayIcon } from "@heroicons/vue/24/solid";
     </div>
   </section>
 </template>
-
-<style scoped>
-#start-hidden {
-  transform: scale(0);
-  font-family: "AdamBold", sans-serif;
-}
-</style>

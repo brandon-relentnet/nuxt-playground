@@ -42,9 +42,10 @@ const teamMembers = [
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 place-content-center mb-8">
         <div
-          v-for="(member, index) in teamMembers"
-          :key="index"
-          class="text-center gap-y-4"
+          v-for="(member, i) in teamMembers"
+          :key="member.name"
+          v-sequential-fade="{ index: i, delay: 0.55 }"
+          class="text-center grid-card gap-y-4"
         >
           <NuxtImg :src="member.image" class="rounded-xl h-auto mx-auto mb-6" />
           <div class="w-3/4 mx-auto">

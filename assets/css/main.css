@@ -23,18 +23,12 @@
     --color-subtle: #5c5c5c;
 }
 
+/** Typography **/
 html {
+    font-family: 'Poppins', sans-serif;
+    font-display: swap;
     background-color: var(--color-base);
     color: var(--color-text);
-}
-
-/** Typography **/
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-.section-title {
-    font-family: 'AdamBold', sans-serif;
 }
 
 /** Background Masks **/
