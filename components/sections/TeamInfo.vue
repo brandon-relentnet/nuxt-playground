@@ -46,11 +46,11 @@ const teamMembers = [
           :key="index"
           class="text-center gap-y-4"
         >
-          <NuxtImg :src="member.image" class="rounded-xl h-auto mx-auto" />
-          <div class="w-3/4 mx-auto pt-6">
+          <NuxtImg :src="member.image" class="rounded-xl h-auto mx-auto mb-6" />
+          <div class="w-3/4 mx-auto">
             <h3 class="text-xl font-semibold">{{ member.name }}</h3>
-            <p class="text-sm text-subtle tracking-wide">{{ member.role }}</p>
-            <p class="text-subtle mt-2">{{ member.blurb }}</p>
+            <p class="role-text italic text-subtle tracking-wide mb-2">{{ member.role }}</p>
+            <p class="text-subtle">{{ member.blurb }}</p>
           </div>
         </div>
       </div>
@@ -62,3 +62,9 @@ const teamMembers = [
     </div>
   </section>
 </template>
+
+<style scoped>
+.role-text {
+  font-family: "AdamBold", sans-serif;
+}
+</style>

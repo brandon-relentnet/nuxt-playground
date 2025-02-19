@@ -6,7 +6,16 @@ export default defineNuxtPlugin((nuxtApp) => {
         mounted(el) {
             if (typeof window === 'undefined') return
 
-            animate(el, { scale: [0, 1] }, { ease: 'circInOut', duration: 1 })
+            const observer = new IntersectionObserver((entries) => {
+                const entry = entries[0]
+                if (entry.isIntersecting) {
+                    animate(el, { scale: [0, 1] }, { ease: 'circInOut', duration: 1 })
+
+                    observer.unobserve(el)
+                }
+            })
+
+            observer.observe(el)
 
             const hoverCleanup = hover(el, (element) => {
                 animate(element, { scale: 1.1 }, { type: 'spring' })
@@ -22,12 +31,12 @@ export default defineNuxtPlugin((nuxtApp) => {
             el._motionCleanup = () => {
                 hoverCleanup()
                 pressCleanup()
+                observer.unobserve(el)
             }
         },
 
         unmounted(el) {
             if (typeof window === 'undefined') return
-
             el._motionCleanup?.()
         },
     })
