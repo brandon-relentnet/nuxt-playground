@@ -60,14 +60,14 @@ const servicesProvided = [
   <section id="our-services" class="relative bg-surface">
     <span class="bg-mask-right" />
     <div class="container relative mx-auto py-section px-4">
-      <div class="md:w-1/2 text-center mx-auto py-block">
-        <span class="text-sm text-rose font-semibold tracking-widest"
+      <div class="md:w-2/3 text-center mx-auto py-block">
+        <span class="text-sm text-rose font-semibold tracking-widest section-title"
           >SERVICES</span
         >
         <h2 class="text-5xl font-bold mt-6">
           Your success, our <span class="italic">commitment</span>.
         </h2>
-        <p class="text-subtle text-lg mt-4">
+        <p class="text-subtle mt-4 max-w-[80ch] mx-auto">
           We bring ideas to life with stunning websites, powerful apps, and
           strategic online growth. Whether you need a new digital home,
           marketing that converts, or reliable hosting and support, we’re here
@@ -104,7 +104,10 @@ const servicesProvided = [
 </template>
 
 <style scoped>
-#start-hidden {
-  transform: scale(0);
+.section-title {
+  font-family: 'AdamBold', sans-serif;
+}
+div {
+  font-family: 'Poppins', sans-serif;
 }
 </style>

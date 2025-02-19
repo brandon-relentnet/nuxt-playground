@@ -14,7 +14,7 @@ export default defineNuxtPlugin((nuxtApp) => {
             })
 
             const pressCleanup = press(el, (element) => {
-                animate(element, { scale: 0.8 }, { type: 'spring', stiffness: 1000 })
+                animate(element, { scale: 1 }, { type: 'spring', stiffness: 1000 })
                 return () =>
                     animate(element, { scale: 1 }, { type: 'spring', stiffness: 500 })
             })

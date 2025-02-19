@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, computed } from "vue";
+import { computed } from "vue";
 import { useRouter } from "#imports";
 import { PlayIcon } from "@heroicons/vue/24/solid";
 
