@@ -1,10 +1,5 @@
 <script setup>
 import { PlayIcon } from "@heroicons/vue/24/solid";
-
-const scrollToNextSection = () => {
-  const nextSectionEl = document.getElementById("team-info");
-  nextSectionEl?.scrollIntoView({ behavior: "smooth" });
-};
 </script>
 
 <template>
@@ -37,15 +32,7 @@ const scrollToNextSection = () => {
             services; you’re getting a partner committed to achieving relentless
             success for your online presence.
           </p>
-          <button
-            @click="scrollToNextSection"
-            class="group mt-12 inline-block bg-linear-to-r from-rose to-foam text-text px-8 py-4 rounded-xl font-semibold hover:scale-105 transition duration-200 cursor-pointer active:scale-95"
-          >
-            Learn about us
-            <PlayIcon
-              class="size-3 -mt-0.5 inline-block group-hover:rotate-90 transition duration-200 text-text"
-            />
-          </button>
+          <MotionButton scrollTo="team-info">Learn about us </MotionButton>
         </div>
       </div>
     </div>

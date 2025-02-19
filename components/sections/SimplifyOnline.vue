@@ -42,8 +42,10 @@ import { PlayIcon } from "@heroicons/vue/24/solid";
             runs smoothly.
           </p>
           <NuxtLink
+            v-motion-button
+            id="start-hidden"
             to="https://control.relentnet.com/index.php?rp=/login"
-            class="group mt-12 inline-block bg-linear-to-r from-rose to-foam text-text px-8 py-4 rounded-xl font-semibold hover:scale-105 transition duration-200 cursor-pointer active:scale-95"
+            class="group mt-12 inline-block bg-linear-to-r from-rose to-foam text-text px-6 py-3 text-lg rounded-xl tracking-widest font-bold cursor-pointer"
           >
             Access your account
             <PlayIcon
@@ -59,3 +61,10 @@ import { PlayIcon } from "@heroicons/vue/24/solid";
     </div>
   </section>
 </template>
+
+<style scoped>
+#start-hidden {
+  transform: scale(0);
+  font-family: "AdamBold", sans-serif;
+}
+</style>

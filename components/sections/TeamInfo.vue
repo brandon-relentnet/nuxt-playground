@@ -1,6 +1,5 @@
 <script setup>
 import { PlayIcon } from "@heroicons/vue/24/solid";
-
 const teamMembers = [
   {
     name: "Brandon Harris",
@@ -24,11 +23,6 @@ const teamMembers = [
     image: "/images/lindsey-delaune-pfp.jpg",
   },
 ];
-
-const scrollToNextSection = () => {
-  const nextSectionEl = document.getElementById("the-difference");
-  nextSectionEl?.scrollIntoView({ behavior: "smooth" });
-};
 </script>
 
 <template>
@@ -56,23 +50,17 @@ const scrollToNextSection = () => {
           class="text-center gap-y-4"
         >
           <NuxtImg :src="member.image" class="rounded-xl h-auto mx-auto" />
-          <div class="w-3/4 mx-auto">
+          <div class="w-3/4 mx-auto pt-6">
             <h3 class="text-xl font-semibold">{{ member.name }}</h3>
             <p class="text-sm text-subtle tracking-wide">{{ member.role }}</p>
             <p class="text-subtle mt-2">{{ member.blurb }}</p>
           </div>
         </div>
       </div>
-      <div class="flex justify-center pb-block">
-        <button
-          @click="scrollToNextSection"
-          class="group mt-12 bg-linear-to-r from-rose to-foam text-text px-8 py-4 rounded-xl font-semibold hover:scale-105 transition duration-200 cursor-pointer active:scale-95"
+      <div class="flex justify-center py-block">
+        <MotionButton scrollTo="the-difference"
+          ><span class="italic">More</span> about us </MotionButton
         >
-          More about us
-          <PlayIcon
-            class="size-3 -mt-0.5 inline-block group-hover:rotate-90 transition duration-200 text-text"
-          />
-        </button>
       </div>
     </div>
   </section>

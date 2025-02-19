@@ -1,5 +1,10 @@
 <script setup>
-import { ChartBarIcon, EyeIcon, HeartIcon, PlayIcon } from "@heroicons/vue/24/solid";
+import {
+  ChartBarIcon,
+  EyeIcon,
+  HeartIcon,
+  PlayIcon,
+} from "@heroicons/vue/24/solid";
 
 const theDifferences = [
   {
@@ -71,17 +76,17 @@ const theDifferences = [
           transaction; it’s a perpetual collaboration focused on your success.
         </p>
         <div class="flex justify-center pb-block">
-          <NuxtLink
-            to="/services"
-            class="group mt-12 inline-block bg-linear-to-r from-rose to-foam text-text px-8 py-4 rounded-xl font-semibold hover:scale-105 transition duration-200 cursor-pointer active:scale-95"
-          >
-            The <span class="italic">most</span> about us
-            <PlayIcon
-              class="size-3 -mt-0.5 inline-block group-hover:rotate-360 transition duration-200 text-text"
-            />
-          </NuxtLink>
+          <MotionButton to="/about"
+            >The <span class="italic">most</span> about us
+          </MotionButton>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+#start-hidden {
+  transform: scale(0);
+}
+</style>

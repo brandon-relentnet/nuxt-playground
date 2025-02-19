@@ -19,9 +19,9 @@ export default defineNuxtConfig({
   ],
   fonts: {
     families: [
-      { name: 'AdamMedium', src: '/fonts/Adam-Medium.ttf' },
-      { name: 'AdamLight', src: '/fonts/Adam-Light.ttf' },
-      { name: 'AdamBold', src: '/fonts/Adam-Bold.ttf' },
+      { name: "AdamMedium", src: "/fonts/Adam-Medium.ttf" },
+      { name: "AdamLight", src: "/fonts/Adam-Light.ttf" },
+      { name: "AdamBold", src: "/fonts/Adam-Bold.ttf" },
     ],
   },
 });

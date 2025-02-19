@@ -45,16 +45,7 @@ onMounted(() => {
       <div class="w-1/2 text-6xl text-center font-bold">
         <h1 class="empower-text rounded-xl text-rose p-2">Empower</h1>
         <h1>your online vision.</h1>
-
-        <button
-          @click="scrollToNextSection"
-          class="group mt-6 px-6 py-3  bg-linear-to-r tracking-widest from-rose to-foam text-text text-lg rounded-xl font-medium hover:scale-105 transition duration-200 cursor-pointer active:scale-95"
-        >
-          Explore
-          <PlayIcon
-            class="size-3 -mt-0.5 inline-block group-hover:rotate-90 transition duration-200 text-text"
-          />
-        </button>
+        <MotionButton scrollTo="our-services">Explore </MotionButton>
       </div>
     </div>
   </div>

@@ -58,15 +58,15 @@ const servicesProvided = [
 
 <template>
   <section id="our-services" class="relative bg-surface">
-    <span
-      class="bg-mask-right"
-    />
+    <span class="bg-mask-right" />
     <div class="container relative mx-auto py-section px-4">
       <div class="md:w-1/2 text-center mx-auto py-block">
         <span class="text-sm text-rose font-semibold tracking-widest"
           >SERVICES</span
         >
-        <h2 class="text-5xl font-bold mt-6">Your success, our <span class="italic">commitment</span>.</h2>
+        <h2 class="text-5xl font-bold mt-6">
+          Your success, our <span class="italic">commitment</span>.
+        </h2>
         <p class="text-subtle text-lg mt-4">
           We bring ideas to life with stunning websites, powerful apps, and
           strategic online growth. Whether you need a new digital home,
@@ -75,7 +75,7 @@ const servicesProvided = [
         </p>
       </div>
 
-      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="my-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <NuxtLink
           v-for="service in servicesProvided"
           :key="service.name"
@@ -97,16 +97,14 @@ const servicesProvided = [
         </NuxtLink>
       </div>
       <div class="flex justify-center pb-block">
-        <NuxtLink
-          to="/services"
-          class="group mt-12 inline-block bg-linear-to-r from-rose to-foam text-text px-8 py-4 rounded-xl font-semibold hover:scale-105 transition duration-200 cursor-pointer active:scale-95"
-        >
-          See all we offer
-          <PlayIcon
-            class="size-3 -mt-0.5 inline-block group-hover:rotate-360 transition duration-200 text-text"
-          />
-        </NuxtLink>
+        <MotionButton to="/services">See our services </MotionButton>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+#start-hidden {
+  transform: scale(0);
+}
+</style>
