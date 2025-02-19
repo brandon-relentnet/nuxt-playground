@@ -16,21 +16,11 @@
 }
 
 [data-theme="light"] {
-    --color-base: #191724;
-    --color-surface: #1f1d2e;
-    --color-overlay: #26233a;
-    --color-muted: #6e6a86;
-    --color-subtle: #908caa;
-    --color-text: #e0def4;
-    --color-love: #eb6f92;
-    --color-gold: #f6c177;
-    --color-rose: #ebbcba;
-    --color-pine: #31748f;
-    --color-foam: #9ccfd8;
-    --color-iris: #c4a7e7;
-    --color-highlight-low: #21202e;
-    --color-highlight-med: #403d52;
-    --color-highlight-high: #524f67;
+    --color-base: #f5f5f7;
+    --color-surface: #ffffff;
+    --color-overlay: #e6e6e9;
+    --color-text: #181818;
+    --color-subtle: #5c5c5c;
 }
 
 html {
@@ -42,26 +32,27 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
 }
+
 .section-title {
     font-family: 'AdamBold', sans-serif;
 }
 
 /** Background Masks **/
 .bg-mask-right {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyAgZmlsbD0iIzFhMWExZSIgdmlld0JveD0iMCAwIDE5MjAgMTQ0MCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cG9seWdvbiBwb2ludHM9IjE5MjAgOTguNDkgMTU2OCA3NzYuMDUgMTE2NC44MyAwIDAgMCAwIDE0NDAgMTMzMS40NCAxNDQwIDE5MjAgMzA3LjA3IDE5MjAgOTguNDkiLz48L3N2Zz4=);
-    background-size: calc(100% + 2px) calc(100% + 2px);
     background-color: var(--color-base);
+    background-size: calc(100% + 2px) calc(100% + 2px);
     background-position: 50%;
 }
 
 .bg-mask-left {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyAgZmlsbD0iIzFhMWExZSIgdmlld0JveD0iMCAwIDE5MjAgMTkyMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pbllNaW4gc2xpY2UiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE0ODQuNjcsMTA2OC42Myw5MjkuNTEsMEgxOTIwVjIzMC42N1pNMTkyMCw0MzkuNTYsMTE1MC45LDE5MjBIMTkyMFoiLz48L3N2Zz4=);
-    background-size: cover;
+    background-color: var(--color-surface);
     transform: scale(-1, 1);
     background-position: right 0px center;
 }
 
 .bg-mask-right,
 .bg-mask-left {
+    -webkit-mask: url('/svg/bg-mask.svg') no-repeat center / cover;
+    mask: url('/svg/bg-mask.svg') no-repeat center / cover;
     @apply inset-0 absolute overflow-hidden bg-no-repeat lg:visible invisible;
 }
