@@ -40,7 +40,7 @@ const closeDropdown = () => {
 
 <template>
   <nav
-    class="bg-base text-text h-20 flex justify-between items-center px-4 fixed top-0 left-0 w-full font-semibold z-50"
+    class="bg-base text-text h-20 flex justify-between items-center px-4 fixed top-0 left-0 w-full z-50"
   >
     <div class="flex justify-center items-center gap-x-2 w-full">
       <div
@@ -101,3 +101,9 @@ const closeDropdown = () => {
     <ThemeToggle />
   </nav>
 </template>
+
+<style scoped>
+  nav {
+    font-family: 'AdamBold', sans-serif;
+  }
+</style>

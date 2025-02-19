@@ -24,7 +24,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative h-[112vh] w-full bg-rose overflow-hidden">
+  <div class="relative h-[112vh] w-full bg-rose overflow-hidden font-adam">
     <div
       ref="imageRef"
       class="absolute top-[10%] left-0 w-full h-[120%] transition-transform duration-[1200ms] ease-out"
@@ -48,7 +48,7 @@ onMounted(() => {
 
         <button
           @click="scrollToNextSection"
-          class="group mt-6 px-6 py-3 bg-linear-to-r from-rose to-foam text-text text-lg rounded-xl font-semibold hover:scale-105 transition duration-200 cursor-pointer active:scale-95"
+          class="group mt-6 px-6 py-3  bg-linear-to-r tracking-widest from-rose to-foam text-text text-lg rounded-xl font-medium hover:scale-105 transition duration-200 cursor-pointer active:scale-95"
         >
           Explore
           <PlayIcon
@@ -61,6 +61,10 @@ onMounted(() => {
 </template>
 
 <style scoped>
+div {
+  font-family: "Poppins", sans-serif;
+}
+
 @keyframes slideMask {
   from {
     transform: translateX(-100%);
