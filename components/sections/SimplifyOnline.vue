@@ -7,7 +7,7 @@ import { PlayIcon } from "@heroicons/vue/24/solid";
     <span class="bg-mask-right"></span>
     <div class="container relative mx-auto px-4 py-section">
       <div
-        class="flex flex-col lg:flex-row items-center justify-center lg:space-x-12 py-block"
+        class="flex flex-col lg:flex-row items-center justify-center lg:gap-x-12 py-block"
       >
         <div class="lg:w-1/3 text-left">
           <span class="text-sm text-rose font-semibold tracking-widest"

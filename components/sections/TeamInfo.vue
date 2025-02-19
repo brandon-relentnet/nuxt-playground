@@ -53,7 +53,7 @@ const scrollToNextSection = () => {
         <div
           v-for="(member, index) in teamMembers"
           :key="index"
-          class="text-center space-y-4"
+          class="text-center gap-y-4"
         >
           <NuxtImg :src="member.image" class="rounded-xl h-auto mx-auto" />
           <div class="w-3/4 mx-auto">

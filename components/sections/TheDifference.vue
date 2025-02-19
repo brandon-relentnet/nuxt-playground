@@ -30,13 +30,13 @@ const theDifferences = [
   <section id="the-difference" class="relative bg-base">
     <span class="bg-mask-left" />
     <div
-      class="container relative mx-auto py-section px-4 lg:px-14 xl:px-24 2xl:px-34 flex flex-col lg:flex-row items-center justify-center lg:space-x-12"
+      class="container relative mx-auto py-section px-4 lg:px-14 xl:px-24 2xl:px-34 flex flex-col lg:flex-row items-center justify-center lg:gap-x-12"
     >
       <div class="grid grid-cols-1 gap-8 w-full">
         <div
           v-for="(difference, index) in theDifferences"
           :key="index"
-          class="flex items-center space-x-4 bg-overlay p-6 rounded-xl border-2 border-transparent hover:border-foam/30 active:border-foam transition duration-200 shadow-md hover:shadow-foam/30 hover:shadow-lg"
+          class="flex items-center gap-x-4 bg-overlay p-6 rounded-xl border-2 border-transparent hover:border-foam/30 active:border-foam transition duration-200 shadow-md hover:shadow-foam/30 hover:shadow-lg"
         >
           <component :is="difference.icon" class="size-8 text-rose" />
           <div>

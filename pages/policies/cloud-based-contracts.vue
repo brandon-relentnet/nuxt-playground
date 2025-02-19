@@ -134,12 +134,6 @@
         confidentiality of proprietary or sensitive information exchanged under
         this Agreement.
       </p>
-
-      <p class="text-sm text-gray-500 mt-8">
-        Note: This document is provided for informational purposes only and does
-        not constitute legal advice. Please consult with a legal professional to
-        tailor this contract to your specific needs.
-      </p>
     </div>
   </div>
 </template>

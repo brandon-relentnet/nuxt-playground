@@ -12,7 +12,7 @@ const scrollToNextSection = () => {
     <span class="bg-mask-left"></span>
     <div class="container relative mx-auto px-4 py-section">
       <div
-        class="flex flex-col lg:flex-row items-center justify-center lg:space-x-12 py-block"
+        class="flex flex-col lg:flex-row items-center justify-center lg:gap-x-12 py-block"
       >
         <NuxtImg
           src="/images/software-33.png"

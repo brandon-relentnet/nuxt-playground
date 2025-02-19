@@ -42,11 +42,11 @@ const closeDropdown = () => {
   <nav
     class="bg-base text-text h-20 flex justify-between items-center px-4 fixed top-0 left-0 w-full font-semibold z-50"
   >
-    <div class="flex justify-center items-center space-x-2 w-full">
+    <div class="flex justify-center items-center gap-x-2 w-full">
       <div
         v-for="link in navLinks"
         :key="link.text"
-        class="relative inline-block"
+        class="relative"
       >
         <div
           v-if="link.children"

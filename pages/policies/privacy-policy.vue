@@ -67,11 +67,6 @@
           >support@relentnet.com</a
         >.
       </p>
-
-      <p class="text-sm text-gray-500">
-        Note: This document is provided for informational purposes only and does
-        not constitute legal advice.
-      </p>
     </div>
   </div>
 </template>

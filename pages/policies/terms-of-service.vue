@@ -35,11 +35,6 @@
         RelentNet shall not be liable for any indirect, incidental, or
         consequential damages resulting from your use of our services.
       </p>
-
-      <p class="text-sm text-gray-500">
-        Note: This document is provided for informational purposes only and does
-        not constitute legal advice.
-      </p>
     </div>
   </div>
 </template>

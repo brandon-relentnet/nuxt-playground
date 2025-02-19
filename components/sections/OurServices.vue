@@ -80,9 +80,9 @@ const servicesProvided = [
           v-for="service in servicesProvided"
           :key="service.name"
           :to="service.link"
-          class="flex group items-center shadow-md hover:shadow-foam/30 hover:shadow-lg justify-between space-x-4 bg-overlay p-6 rounded-xl border-2 border-transparent hover:border-foam/30 active:border-foam transition duration-200 cursor-pointer"
+          class="flex group items-center shadow-md hover:shadow-foam/30 hover:shadow-lg justify-between gap-x-4 bg-overlay p-6 rounded-xl border-2 border-transparent hover:border-foam/30 active:border-foam transition duration-200 cursor-pointer"
         >
-          <div class="flex items-center space-x-4">
+          <div class="flex items-center gap-x-4">
             <component :is="service.icon" class="size-8 text-rose" />
             <div>
               <h3 class="text-2xl font-semibold mb-2">{{ service.name }}</h3>

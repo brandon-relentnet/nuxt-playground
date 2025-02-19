@@ -42,11 +42,6 @@
         with your order details and an explanation of your concerns. Please
         allow up to 10 business days for processing.
       </p>
-
-      <p class="text-sm text-gray-500">
-        Note: This document is provided for informational purposes only and does
-        not constitute legal advice.
-      </p>
     </div>
   </div>
 </template>
