@@ -12,7 +12,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex justify-center items-center size-8">
     <button
       v-if="mounted"
       v-motion-button
@@ -24,5 +23,4 @@ onMounted(() => {
         <SunIcon v-else key="sun" class="size-6" />
       </transition>
     </button>
-  </div>
 </template>

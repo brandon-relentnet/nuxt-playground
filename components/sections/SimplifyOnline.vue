@@ -9,7 +9,7 @@ import { PlayIcon } from "@heroicons/vue/24/solid";
       <div
         class="flex flex-col lg:flex-row items-center justify-center lg:gap-x-12"
       >
-        <div class="lg:w-1/3 text-left">
+        <div class="lg:w-1/3 text-center lg:text-left mb-12 lg:mb-0">
           <SectionTitle>Manage</SectionTitle>
           <h2 class="text-5xl font-bold mb-6">
             <span class="italic">Simplify</span> your online management.
@@ -51,7 +51,11 @@ import { PlayIcon } from "@heroicons/vue/24/solid";
         </div>
         <NuxtImg
           src="/images/software-23.png"
-          class="md:w-1/2 h-full object-cover"
+          alt="Simplify Online Management"
+          class="object-contain"
+          quality="100"
+          format="webp"
+          sizes="80vw md:50vw lg:500px"
         />
       </div>
     </div>

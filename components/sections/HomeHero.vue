@@ -1,6 +1,6 @@
 <!-- HomeHero.vue -->
 <script setup>
-import { ref, computed, onMounted, nextTick } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useWindowScroll } from "@vueuse/core";
 import { useHead } from "#imports";
 
@@ -18,9 +18,9 @@ useHead({
 });
 
 onMounted(() => {
-  nextTick(() => {
+  setTimeout(() => {
     imageVisible.value = true;
-  });
+  }, 100);
 });
 
 const parallaxStyle = computed(() => ({

@@ -40,24 +40,36 @@ const teamMembers = [
           to bring your online vision to life.
         </p>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 place-content-center mb-8" v-stagger-fade>
+      <div
+        class="grid grid-cols-1 lg:grid-cols-3 gap-12 place-content-center mb-8"
+        v-stagger-fade
+      >
         <div
           v-for="(member, i) in teamMembers"
           :key="member.name"
           class="text-center grid-card gap-y-4"
         >
-          <NuxtImg :src="member.image" class="rounded-xl h-auto mx-auto mb-6" />
+          <NuxtImg
+            :src="member.image"
+            class="rounded-xl h-auto mx-auto mb-6"
+            :alt="member.name"
+            quality="100"
+            format="webp"
+            sizes="75vw md:50vw lg:400px"
+          />
           <div class="w-3/4 mx-auto">
             <h3 class="text-xl font-semibold">{{ member.name }}</h3>
-            <p class="role-text italic text-subtle tracking-wide mb-2">{{ member.role }}</p>
+            <p class="role-text italic text-subtle tracking-wide mb-2">
+              {{ member.role }}
+            </p>
             <p class="text-subtle">{{ member.blurb }}</p>
           </div>
         </div>
       </div>
       <div class="flex justify-center">
         <MotionButton scrollTo="the-difference"
-          ><span class="italic">More</span> about us </MotionButton
-        >
+          ><span class="italic">More</span> about us
+        </MotionButton>
       </div>
     </div>
   </section>

@@ -3,12 +3,16 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/vue/24/solid";
 </script>
 
 <template>
-  <footer class="bg-overlay py-block">
-    <div class="container mx-auto px-4 grid md:grid-cols-4 gap-8">
-      <div class="gap-y-4">
+  <footer class="bg-overlay">
+    <div class="container py-block mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-4 gap-8 place-content-center text-center md:text-left">
+      <div class="gap-y-4 flex items-center justify-center md:justify-start">
         <NuxtImg
           src="/images/relentnet-logo.png"
-          class="h-auto max-w-1/2 object-cover"
+          class="object-contain"
+          alt="RelentNet Logo"
+          quality="100"
+          format="webp"
+          sizes="15vw lg:150px"
         />
       </div>
       <div class="gap-y-4">
@@ -48,15 +52,15 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/vue/24/solid";
       <div class="gap-y-4">
         <SectionTitle>Contact</SectionTitle>
         <ul class="gap-y-2">
-          <li class="flex items-center gap-x-2">
+          <li class="flex items-center justify-center gap-x-2 md:justify-start">
             <MapPinIcon class="size-5 text-rose" />
             <span class="text-subtle">Nashville, TN</span>
           </li>
-          <li class="flex items-center gap-x-2">
+          <li class="flex items-center justify-center gap-x-2 md:justify-start">
             <PhoneIcon class="size-5 text-rose" />
             <span class="text-subtle">+1 (918) 550-9049</span>
           </li>
-          <li class="flex items-center gap-x-2">
+          <li class="flex items-center justify-center gap-x-2 md:justify-start">
             <EnvelopeIcon class="size-5 text-rose" />
             <span class="text-subtle">support@relentnet.com</span>
           </li>
@@ -102,7 +106,7 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/vue/24/solid";
         </ul>
       </div>
     </div>
-    <div class="mt-12 border-t border-foam/30 pt-4">
+    <div class="mt-12 bg-base py-block md:py-2">
       <div
         class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
       >

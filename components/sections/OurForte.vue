@@ -3,13 +3,17 @@
     <span class="bg-mask-left"></span>
     <div class="container relative mx-auto px-4 py-block">
       <div
-        class="flex flex-col lg:flex-row items-center justify-center lg:gap-x-12"
+        class="flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-12"
       >
         <NuxtImg
           src="/images/software-33.png"
-          class="md:w-1/2 h-full object-cover"
+          class="object-contain"
+          alt="Revolutionizing the web with relentless results."
+          quality="100"
+          format="webp"
+          sizes="80vw md:50vw lg:500px"
         />
-        <div class="lg:w-1/3 text-left">
+        <div class="lg:w-1/3 text-center lg:text-left mb-12 lg:mb-0">
           <SectionTitle>Forte</SectionTitle>
           <h2 class="text-5xl font-bold mb-6">
             Revolutionizing the web with

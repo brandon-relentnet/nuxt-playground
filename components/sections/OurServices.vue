@@ -8,17 +8,6 @@ import {
   WrenchScrewdriverIcon,
   ArrowRightIcon
 } from "@heroicons/vue/24/solid";
-//import { onMounted } from "vue";
-//import { animate, stagger } from "motion";
-
-/** 
-onMounted(() => {
-  animateServices();
-});
-const animateServices = () => {
-  animate(".grid-card", { opacity: [0, 1], y: [50, 0] }, { delay: stagger(0.15) });
-};
-*/
 
 const servicesProvided = [
   {

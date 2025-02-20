@@ -43,11 +43,8 @@ const closeDropdown = () => {
     class="bg-base text-text h-20 flex justify-between items-center px-8 fixed top-0 left-0 w-full z-50"
   >
     <div class="flex justify-center items-center gap-x-2 w-full">
-      <div
-        v-for="link in navLinks"
-        :key="link.text"
-        class="relative"
-      >
+      <div class="flex justify-center items-center size-8" />
+      <div v-for="link in navLinks" :key="link.text" class="relative">
         <div
           v-if="link.children"
           @mouseenter="openDropdown(link.text)"
@@ -98,12 +95,14 @@ const closeDropdown = () => {
         </NuxtLink>
       </div>
     </div>
-    <ThemeToggle />
+    <div class="flex justify-center items-center size-8">
+      <ThemeToggle />
+    </div>
   </nav>
 </template>
 
 <style scoped>
-  nav {
-    font-family: 'AdamBold', sans-serif;
-  }
+nav {
+  font-family: "AdamBold", sans-serif;
+}
 </style>
