@@ -11,7 +11,7 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/vue/24/solid";
           alt="RelentNet Logo"
           quality="100"
           format="webp"
-          sizes="75px md:100px lg:150px"
+          sizes="md:100px lg:150px 75px"
         />
       </div>
       <div class="gap-y-4">
