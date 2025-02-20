@@ -11,12 +11,16 @@ function createObserverCallback(el) {
         if (!entry.isIntersecting) return
 
         // Animate the element from scale 0 to 1
-        animate(el, { scale: [0, 1] }, {
-            ease: 'circInOut', duration: 1, onPlay: () => {
-                // Reveal once we start the animation
-                el.style.visibility = 'visible'
-            },
-        })
+        setTimeout(() => {
+            animate(el, { scale: [0, 1] }, {
+                ease: 'circInOut',
+                duration: 1,
+                onPlay: () => {
+                    // Reveal once we start the animation
+                    el.style.visibility = 'visible'
+                },
+            })
+        }, 150)
 
         // Unobserve so it won't trigger again
         observer.unobserve(el)
@@ -61,6 +65,10 @@ function setupPress(el) {
     })
 }
 
+/**
+ * 5) Sets up the hover effect: scale the element slightly on hover,
+ *    and revert on unhover. Returns a cleanup function.
+ */
 export default defineNuxtPlugin((nuxtApp) => {
     nuxtApp.vueApp.directive('motion-button', {
         mounted(el) {

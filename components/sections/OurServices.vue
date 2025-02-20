@@ -8,6 +8,17 @@ import {
   WrenchScrewdriverIcon,
   ArrowRightIcon
 } from "@heroicons/vue/24/solid";
+//import { onMounted } from "vue";
+//import { animate, stagger } from "motion";
+
+/** 
+onMounted(() => {
+  animateServices();
+});
+const animateServices = () => {
+  animate(".grid-card", { opacity: [0, 1], y: [50, 0] }, { delay: stagger(0.15) });
+};
+*/
 
 const servicesProvided = [
   {
@@ -72,12 +83,11 @@ const servicesProvided = [
         </p>
       </div>
 
-      <div class="my-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="my-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6" v-stagger-fade>
         <NuxtLink
           v-for="(service, i) in servicesProvided"
           :key="service.name"
           :to="service.link"
-          v-sequential-fade="{ index: i, delay: 0.15 }"
           class="flex grid-card group items-center shadow-md hover:shadow-foam/30 hover:shadow-lg justify-between gap-x-4 bg-overlay p-6 rounded-xl border-2 border-transparent hover:border-foam/30 active:border-foam transition duration-200 cursor-pointer"
         >
           <div class="flex items-center gap-x-4">

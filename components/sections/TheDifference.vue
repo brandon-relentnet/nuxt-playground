@@ -36,7 +36,7 @@ const theDifferences = [
     <div
       class="container relative mx-auto py-block px-4 lg:px-14 xl:px-24 2xl:px-34 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-12"
     >
-      <div class="grid grid-cols-1 gap-8 w-full">
+      <div class="grid grid-cols-1 gap-8 w-full" v-stagger-fade>
         <div
           v-for="(difference, index) in theDifferences"
           :key="index"

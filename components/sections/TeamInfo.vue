@@ -40,11 +40,10 @@ const teamMembers = [
           to bring your online vision to life.
         </p>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 place-content-center mb-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 place-content-center mb-8" v-stagger-fade>
         <div
           v-for="(member, i) in teamMembers"
           :key="member.name"
-          v-sequential-fade="{ index: i, delay: 0.55 }"
           class="text-center grid-card gap-y-4"
         >
           <NuxtImg :src="member.image" class="rounded-xl h-auto mx-auto mb-6" />
