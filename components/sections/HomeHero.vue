@@ -31,6 +31,9 @@ const parallaxStyle = computed(() => ({
       <NuxtImg
         src="/images/software-35.webp"
         class="w-full h-full object-cover"
+        alt="Homepage Image"
+        format="webp"
+        quality="100"
       />
     </div>
 

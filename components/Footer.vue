@@ -4,15 +4,14 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/vue/24/solid";
 
 <template>
   <footer class="bg-overlay">
-    <div class="container py-block mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-4 gap-8 place-content-center text-center md:text-left">
-      <div class="gap-y-4 flex items-center justify-center md:justify-start">
+    <div class="container py-section mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-4 gap-8 place-content-center text-center md:text-left">
+      <div class="flex items-center justify-center md:justify-start">
         <NuxtImg
           src="/images/relentnet-logo.png"
-          class="object-contain"
           alt="RelentNet Logo"
           quality="100"
           format="webp"
-          sizes="(min-width: 768px) 15vw, 150px"
+          sizes="75px md:100px lg:150px"
         />
       </div>
       <div class="gap-y-4">
@@ -106,9 +105,9 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/vue/24/solid";
         </ul>
       </div>
     </div>
-    <div class="mt-12 bg-base md:py-2">
+    <div class="bg-base">
       <div
-        class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+        class="container mx-auto py-block md:py-2 px-4 flex flex-col md:flex-row justify-between items-center"
       >
         <p class="text-sm text-subtle">
           &copy; 2025 RelentNet. All rights reserved.

@@ -10,8 +10,6 @@
           class="object-contain"
           alt="Revolutionizing the web with relentless results."
           quality="100"
-          width="500"
-          height="500"
           format="webp"
           sizes="80vw md:50vw lg:500px"
         />
