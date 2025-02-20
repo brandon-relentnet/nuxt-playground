@@ -31,8 +31,6 @@ const parallaxStyle = computed(() => ({
       <NuxtImg
         src="/images/software-35.webp"
         class="w-full h-full object-cover"
-        loading="eager"
-        priority
       />
     </div>
 

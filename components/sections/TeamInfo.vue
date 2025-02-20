@@ -54,6 +54,8 @@ const teamMembers = [
             class="rounded-xl h-auto mx-auto mb-6"
             :alt="member.name"
             quality="100"
+            width="400"
+            height="400"
             format="webp"
             sizes="(min-width: 768px) 75vw, (min-width: 1024px) md:50vw, 400px"
           />
