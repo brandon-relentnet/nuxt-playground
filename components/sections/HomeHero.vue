@@ -1,25 +1,31 @@
 <!-- HomeHero.vue -->
 <script setup>
-import { ref, computed } from 'vue'
-import { useWindowScroll } from '@vueuse/core'
-import { useHead } from '#imports'
+import { ref, computed, onMounted, nextTick } from "vue";
+import { useWindowScroll } from "@vueuse/core";
+import { useHead } from "#imports";
 
-const { y } = useWindowScroll()
-const imageVisible = ref(true)
+const { y } = useWindowScroll();
+const imageVisible = ref(false);
 
 useHead({
   link: [
     {
-      rel: 'preload',
-      as: 'image',
-      href: '/images/software-35.png',
+      rel: "preload",
+      as: "image",
+      href: "/images/software-35.png",
     },
   ],
-})
+});
+
+onMounted(() => {
+  nextTick(() => {
+    imageVisible.value = true;
+  });
+});
 
 const parallaxStyle = computed(() => ({
   transform: `translateY(-${y.value * 0.3}px)`,
-}))
+}));
 </script>
 
 <template>
@@ -42,17 +48,12 @@ const parallaxStyle = computed(() => ({
     </div>
 
     <div
-      class="absolute flex items-center justify-center left-1/2 top-[45vh]
-             -translate-x-1/2 -translate-y-1/2 bg-radial from-base from-30%
-             to-transparent to-70% w-[200vw] h-[200vw]
-             max-w-[200vh] max-h-[200vh] aspect-square rounded-full"
+      class="absolute flex items-center justify-center left-1/2 top-[45vh] -translate-x-1/2 -translate-y-1/2 bg-radial from-base from-30% to-transparent to-70% w-[200vw] h-[200vw] max-w-[200vh] max-h-[200vh] aspect-square rounded-full"
     >
       <div class="w-1/2 text-6xl text-center font-bold">
-        <h1 class="empower-text rounded-xl text-rose p-2">
-          Empower
-        </h1>
+        <h1 class="empower-text rounded-xl text-rose p-2">Empower</h1>
         <h1>your online vision.</h1>
-        <MotionButton scrollTo="our-services">Explore</MotionButton>
+        <MotionButton scrollTo="our-services">Explore </MotionButton>
       </div>
     </div>
   </div>
