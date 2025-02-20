@@ -56,7 +56,7 @@ const theDifferences = [
       </div>
       <div class="lg:w-1/2 inline-block text-center lg:text-left mb-12 lg:mb-0">
         <SectionTitle>Difference</SectionTitle>
-        <h2 class="text-5xl font-bold mb-6">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
           A website agency that <span class="italic">stays</span> with you.
         </h2>
         <p class="text-subtle max-w-[80ch] mb-4">

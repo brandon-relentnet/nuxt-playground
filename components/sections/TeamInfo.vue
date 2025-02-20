@@ -30,7 +30,7 @@ const teamMembers = [
     <div class="container relative mx-auto px-4 py-block">
       <div class="text-center lg:w-1/2 mx-auto px-4 mb-12">
         <SectionTitle>People</SectionTitle>
-        <h2 class="text-5xl font-bold mb-6">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
           The <span class="italic">relentless</span> individuals.
         </h2>
         <p class="text-subtle max-w-[80ch] mb-4">

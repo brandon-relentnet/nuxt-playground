@@ -15,7 +15,7 @@
         />
         <div class="lg:w-1/3 text-center lg:text-left mb-12 lg:mb-0">
           <SectionTitle>Forte</SectionTitle>
-          <h2 class="text-5xl font-bold mb-6">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
             Revolutionizing the web with
             <span class="italic">relentless</span> results.
           </h2>

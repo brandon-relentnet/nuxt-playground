@@ -11,7 +11,7 @@ import { PlayIcon } from "@heroicons/vue/24/solid";
       >
         <div class="lg:w-1/3 text-center lg:text-left mb-12 lg:mb-0">
           <SectionTitle>Manage</SectionTitle>
-          <h2 class="text-5xl font-bold mb-6">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">
             <span class="italic">Simplify</span> your online management.
           </h2>
           <p class="text-subtle mb-12">

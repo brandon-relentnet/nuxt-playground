@@ -20,7 +20,7 @@ function createObserverCallback(el) {
                     el.style.visibility = 'visible'
                 },
             })
-        }, 150)
+        }, 100)
 
         // Unobserve so it won't trigger again
         observer.unobserve(el)

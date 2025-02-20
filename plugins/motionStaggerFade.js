@@ -21,7 +21,7 @@ function createObserverCallback(el) {
                     el.style.visibility = 'visible'
                 },
             })
-        }, 300)
+        }, 500)
        
 
         // Unobserve so this animation only triggers once

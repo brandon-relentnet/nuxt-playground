@@ -61,7 +61,7 @@ const servicesProvided = [
     <div class="container relative mx-auto px-4 py-block">
       <div class="md:w-2/3 text-center mx-auto mb-12">
         <SectionTitle>Services</SectionTitle>
-        <h2 class="text-5xl font-bold mb-6">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
           Your success, our <span class="italic">commitment</span>.
         </h2>
         <p class="text-subtle max-w-[80ch] mx-auto">
