@@ -1,30 +1,25 @@
 <!-- HomeHero.vue -->
 <script setup>
-import { ref, computed, onMounted } from "vue";
-import { useWindowScroll, useMediaQuery } from "@vueuse/core";
-
-const isMobile = useMediaQuery("(max-width: 767px)");
+import { ref, computed } from "vue";
+import { useWindowScroll } from "@vueuse/core";
 
 const { y } = useWindowScroll();
 const imageVisible = ref(false);
 
-onMounted(() => {
-  if (!isMobile.value) {
-    setTimeout(() => {
-      imageVisible.value = true;
-    }, 100);
-  }
-});
+function handleImageLoad() {
+  setTimeout(() => {
+    imageVisible.value = true;
+  }, 100);
+}
 
-const parallaxStyle = computed(() => {
-  return isMobile.value ? {} : { transform: `translateY(-${y.value * 0.3}px)` };
-});
+const parallaxStyle = computed(() => ({
+  transform: `translateY(-${y.value * 0.3}px)`,
+}));
 </script>
 
 <template>
-  <div class="relative h-[112vh] w-full bg-rose overflow-hidden">
+  <div class="hero-container relative h-[112vh] w-full bg-rose overflow-hidden">
     <div
-      v-if="!isMobile"
       ref="imageRef"
       class="absolute top-[10%] left-0 w-full h-[120%] transition-transform duration-700 ease-out"
       :class="{
@@ -39,22 +34,48 @@ const parallaxStyle = computed(() => {
         alt="Homepage Image"
         format="webp"
         quality="100"
+        @load="handleImageLoad"
       />
     </div>
 
     <div
-      class="absolute flex items-center justify-center left-1/2 top-[45vh] -translate-x-1/2 -translate-y-1/2 bg-radial from-base from-30% to-transparent to-70% w-[200vw] h-[200vw] max-w-[200vh] max-h-[200vh] aspect-square rounded-full"
+      class="hero-content absolute z-10 flex items-center justify-center left-1/2 top-[45vh] -translate-x-1/2 -translate-y-1/2"
     >
-      <div class="w-1/2 text-5xl md:text-6xl text-center font-bold">
+      <div class="w-3/4 text-5xl md:text-6xl text-center font-bold">
         <h1 class="empower-text rounded-xl text-rose p-2">Empower</h1>
         <h1>your online vision.</h1>
-        <MotionButton scrollTo="our-services">Explore </MotionButton>
+        <MotionButton scrollTo="our-services">Explore</MotionButton>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.hero-container {
+  position: relative;
+}
+
+.hero-container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 45vh;
+  transform: translate(-50%, -50%);
+  width: 200vw;
+  height: 200vw;
+  max-width: 200vh;
+  max-height: 200vh;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--color-base) 30%, transparent 70%);
+  z-index: 1;
+  will-change: transform, opacity;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
 @keyframes slideMask {
   from {
     transform: translateX(-100%);
@@ -74,15 +95,10 @@ const parallaxStyle = computed(() => {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
+  left: -101%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    var(--color-foam),
-    transparent
-  );
+  background: linear-gradient(120deg, transparent, var(--color-foam), transparent);
   animation: slideMask 1s alternate 2;
 }
 </style>
