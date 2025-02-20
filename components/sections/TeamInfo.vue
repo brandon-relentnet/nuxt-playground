@@ -51,7 +51,7 @@ const teamMembers = [
         >
           <NuxtImg
             :src="member.image"
-            class="rounded-xl h-auto mx-auto mb-6"
+            class="rounded-xl mx-auto mb-6"
             :alt="member.name"
             quality="100"
             format="webp"

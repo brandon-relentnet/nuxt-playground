@@ -54,8 +54,6 @@ import { PlayIcon } from "@heroicons/vue/24/solid";
           alt="Simplify Online Management"
           class="object-contain"
           quality="100"
-          width="500"
-          height="500"
           format="webp"
           sizes="80vw md:50vw lg:500px"
         />
