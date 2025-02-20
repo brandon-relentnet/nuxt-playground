@@ -21,10 +21,6 @@ function createObserverCallback(el, index, delay, startDelay) {
                 // Delay the entire sequence by startDelay, then apply the per-item delay
                 delay: startDelay + index * delay,
                 easing: 'ease-in-out',
-                onPlay: () => {
-                    // Reveal once we start the animation
-                    el.style.visibility = 'visible'
-                },
             }
         )
 
@@ -41,7 +37,6 @@ export default defineNuxtPlugin((nuxtApp) => {
 
             // Force the initial style to ensure it's invisible initially
             el.style.opacity = '0'
-            el.style.visibility = 'hidden'
 
             // Extract the index and delay from the directive binding
             // You can also allow the user to override startDelay if you want
