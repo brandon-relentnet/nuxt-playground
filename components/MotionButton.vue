@@ -40,7 +40,7 @@ function handleClick(event) {
     v-motion-button
     class="group mt-6 px-6 py-3 bg-linear-to-r tracking-widest font-bold from-rose to-foam text-text text-lg rounded-xl cursor-pointer"
     @click="handleClick"
-    style="font-family: 'AdamBold', sans-serif;"
+    style="font-family: 'AdamBold', sans-serif; visibility: hidden; opacity: 0;"
   >
     <slot />
     <PlayIcon

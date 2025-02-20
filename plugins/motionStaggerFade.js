@@ -15,7 +15,7 @@ function createObserverCallback(el) {
         // Animate from opacity 0 to 1, and move up from 50px to 0
         setTimeout(() => {
             animate([...el.children], { opacity: [0, 1], y: [50, 0] }, {
-                delay: stagger(.3),
+                delay: stagger(.15),
                 onPlay: () => {
                     // Reveal once we start the animation
                     el.style.visibility = 'visible'
