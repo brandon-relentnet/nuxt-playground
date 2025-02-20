@@ -55,7 +55,7 @@ const teamMembers = [
             :alt="member.name"
             quality="100"
             format="webp"
-            sizes="75vw md:50vw lg:400px"
+            sizes="(min-width: 768px) 75vw, (min-width: 1024px) md:50vw, 400px"
           />
           <div class="w-3/4 mx-auto">
             <h3 class="text-xl font-semibold">{{ member.name }}</h3>
