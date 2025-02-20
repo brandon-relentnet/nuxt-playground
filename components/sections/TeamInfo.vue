@@ -5,21 +5,21 @@ const teamMembers = [
     role: "Co-founder & Software Engineer",
     blurb:
       "Our artistic web designer, bringing technical wizardry and creativity to the table. He loves crafting functional and user-friendly websites with a passion for solving problems and perfection.",
-    image: "/images/brandon-harris-pfp.jpg",
+    image: "/images/brandon-harris-pfp.webp",
   },
   {
     name: "Daniel Velez",
     role: "Co-founder & Sales",
     blurb:
       "The sales expert, dedicated to empowering businesses with innovative web solutions. With a passion for technology and a knack for building relationships, he's committed to driving success through digital excellence.",
-    image: "/images/daniel-velez-pfp.png",
+    image: "/images/daniel-velez-pfp.webp",
   },
   {
     name: "Linsey Delaune",
     role: "Graphic Designer",
     blurb:
       "Our graphic designer, adding an artistic touch to your logos or banners. Her designs are visually appealing, ensuring a unique charm that resonates with your audience.",
-    image: "/images/lindsey-delaune-pfp.jpg",
+    image: "/images/lindsey-delaune-pfp.webp",
   },
 ];
 </script>
@@ -54,7 +54,6 @@ const teamMembers = [
             class="rounded-xl mx-auto mb-6"
             :alt="member.name"
             quality="100"
-            format="webp"
             sizes="75vw md:50vw 400px"
           />
           <div class="w-3/4 mx-auto">
