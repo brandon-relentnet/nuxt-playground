@@ -2,20 +2,9 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
 import { useWindowScroll } from "@vueuse/core";
-import { useHead } from "#imports";
 
 const { y } = useWindowScroll();
 const imageVisible = ref(false);
-
-useHead({
-  link: [
-    {
-      rel: "preload",
-      as: "image",
-      href: "/images/software-35.png",
-    },
-  ],
-});
 
 onMounted(() => {
   setTimeout(() => {

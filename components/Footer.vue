@@ -12,7 +12,7 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/vue/24/solid";
           alt="RelentNet Logo"
           quality="100"
           format="webp"
-          sizes="15vw lg:150px"
+          sizes="(min-width: 768px) 15vw, 150px"
         />
       </div>
       <div class="gap-y-4">
@@ -106,7 +106,7 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/vue/24/solid";
         </ul>
       </div>
     </div>
-    <div class="mt-12 bg-base py-block md:py-2">
+    <div class="mt-12 bg-base md:py-2">
       <div
         class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
       >
