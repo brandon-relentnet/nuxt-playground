@@ -54,7 +54,7 @@ const teamMembers = [
             class="rounded-xl mx-auto mb-6"
             :alt="member.name"
             quality="100"
-            sizes="75vw md:50vw 400px"
+            sizes="350px md:400px"
           />
           <div class="w-3/4 mx-auto">
             <h3 class="text-xl font-semibold">{{ member.name }}</h3>

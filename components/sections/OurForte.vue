@@ -11,7 +11,7 @@
           alt="Revolutionizing the web with relentless results."
           quality="100"
           format="webp"
-          sizes="80vw md:50vw lg:500px"
+          sizes="350px md:500px"
         />
         <div class="lg:w-1/3 text-center lg:text-left mb-12 lg:mb-0">
           <SectionTitle>Forte</SectionTitle>

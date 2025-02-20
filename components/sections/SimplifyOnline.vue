@@ -55,7 +55,7 @@ import { PlayIcon } from "@heroicons/vue/24/solid";
           class="object-contain"
           quality="100"
           format="webp"
-          sizes="80vw md:50vw lg:500px"
+          sizes="350px md:500px"
         />
       </div>
     </div>
