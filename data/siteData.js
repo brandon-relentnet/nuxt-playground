@@ -20,6 +20,14 @@ import {
     WrenchScrewdriverIcon,
     EyeIcon,
     HeartIcon,
+    ArrowRightStartOnRectangleIcon,
+    UserPlusIcon,
+    UserCircleIcon,
+    DocumentCurrencyDollarIcon,
+    ClipboardDocumentListIcon,
+    CreditCardIcon,
+    KeyIcon,
+    QuestionMarkCircleIcon,
 } from "@heroicons/vue/24/solid";
 
 // Navigation items data
@@ -114,6 +122,71 @@ export const navItemsData = [
         label: "About",
         dropdown: false,
         url: "#",
+    },
+];
+
+export const accountItemsData = [
+    {
+        label: "Account",
+        dropdown: true,
+        open: false,
+        sections: [
+            {
+                sectionLabel: "Members",
+                links: [
+                    {
+                        label: "Login",
+                        url: "https://control.relentnet.com/index.php?rp=/login",
+                        icon: ArrowRightStartOnRectangleIcon,
+                    },
+                    {
+                        label: "Create Account",
+                        url: "https://control.relentnet.com/register.php",
+                        icon: UserPlusIcon,
+                    },
+                    {
+                        label: "Account Details",
+                        url: "https://control.relentnet.com/clientarea.php?action=details",
+                        icon: UserCircleIcon,
+                    }
+                ],
+            },
+            {
+                sectionLabel: "Billing",
+                links: [
+                    {
+                        label: "Invoices",
+                        url: "https://control.relentnet.com/clientarea.php?action=invoices",
+                        icon: DocumentCurrencyDollarIcon,
+                    },
+                    {
+                        label: "Quotes",
+                        url: "https://control.relentnet.com/clientarea.php?action=quotes",
+                        icon: ClipboardDocumentListIcon,
+                    },
+                    {
+                        label: "Payment Methods",
+                        url: "https://control.relentnet.com/index.php?rp=/account/paymentmethods",
+                        icon: CreditCardIcon,
+                    },
+                ],
+            },
+            {
+                sectionLabel: "Support",
+                links: [
+                    {
+                        label: "Lost Password",
+                        url: "https://control.relentnet.com/index.php?rp=/password/reset",
+                        icon: KeyIcon,
+                    },
+                    {
+                        label: "Support Tickets",
+                        url: "https://control.relentnet.com/supporttickets.php",
+                        icon: QuestionMarkCircleIcon,
+                    },
+                ],
+            }
+        ],
     },
 ];
 

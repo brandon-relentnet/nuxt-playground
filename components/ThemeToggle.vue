@@ -14,7 +14,6 @@ onMounted(() => {
 <template>
     <button
       v-if="mounted"
-      v-motion-button
       @click="themeStore.toggle"
       class="px-4 py-2 rounded-xl cursor-pointer text-subtle hover:text-text hover:bg-surface transition-colors duration-200"
     >
