@@ -56,7 +56,7 @@ const servicesProvided = [
 </script>
 
 <template>
-  <section id="our-services" class="relative bg-surface py-section">
+  <section id="our-services" class="relative bg-surface py-section scroll-m-20">
     <span class="bg-mask-right" />
     <div class="container relative mx-auto px-4 py-block">
       <div class="md:w-2/3 text-center mx-auto mb-12">

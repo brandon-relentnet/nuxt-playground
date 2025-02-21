@@ -31,7 +31,7 @@ const theDifferences = [
 </script>
 
 <template>
-  <section id="the-difference" class="relative bg-base py-section">
+  <section id="the-difference" class="relative bg-base py-section scroll-m-20">
     <span class="bg-mask-left" />
     <div
       class="container relative mx-auto py-block px-4 lg:px-14 xl:px-24 2xl:px-34 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-x-12"

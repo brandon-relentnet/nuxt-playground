@@ -1,5 +1,5 @@
 <template>
-  <section id="our-services" class="relative bg-base py-section">
+  <section class="relative bg-base py-section">
     <span class="bg-mask-left" />
     <div class="container relative mx-auto py-block px-4">
       <div class="lg:w-1/2 text-center mx-auto">

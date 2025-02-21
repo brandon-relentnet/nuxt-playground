@@ -5,7 +5,7 @@ import { EnvelopeIcon, PhoneIcon, MapPinIcon } from "@heroicons/vue/24/solid";
 <template>
   <footer class="bg-overlay">
     <div class="container py-section mx-auto px-4 grid md:grid-cols-2 lg:grid-cols-4 gap-8 place-content-center text-center md:text-left">
-      <div class="flex items-center justify-center md:justify-start">
+      <div class="max-w-[150px] mx-auto md:mx-0">
         <NuxtImg
           src="/images/relentnet-logo.png"
           alt="RelentNet Logo"
