@@ -1,33 +1,5 @@
 <script setup>
-import {
-  ChartBarIcon,
-  EyeIcon,
-  HeartIcon
-} from "@heroicons/vue/24/solid";
-
-const theDifferences = [
-  {
-    title: "Results-Driven Excellence",
-    subtitle: "We don’t just build—we deliver measurable success.",
-    description:
-      "Every project we take on is backed by strategy, innovation, and data-driven decision-making. Your growth is our mission.",
-    icon: ChartBarIcon,
-  },
-  {
-    title: "Radical Transparency",
-    subtitle: "No hidden fees, no surprises—just honest collaboration.",
-    description:
-      "We believe in open communication, clear pricing, and keeping you informed every step of the way. Trust is at the core of everything we do.",
-    icon: EyeIcon,
-  },
-  {
-    title: "Long-Term Partnership",
-    subtitle: "Beyond launch, beyond the sale—we’re here for the long run.",
-    description:
-      "We don’t disappear after delivering your project. We ensure your digital presence thrives with continuous support and strategic guidance.",
-    icon: HeartIcon,
-  },
-];
+import { theDifferences } from "~/data/siteData";
 </script>
 
 <template>
