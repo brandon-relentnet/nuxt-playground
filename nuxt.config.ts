@@ -17,17 +17,8 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@formkit/auto-animate/nuxt",
   ],
-  image: {
-    screens: {
-      sm: 640,
-      md: 768,
-      lg: 1024,
-    }
-  },
   fonts: {
     families: [
-      { name: "AdamMedium", src: "/fonts/Adam-Medium.ttf" },
-      { name: "AdamLight", src: "/fonts/Adam-Light.ttf" },
       { name: "AdamBold", src: "/fonts/Adam-Bold.ttf" },
     ],
   },

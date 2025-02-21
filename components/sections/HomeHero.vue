@@ -1,47 +1,53 @@
-<!-- HomeHero.vue -->
 <script setup>
 import { ref, computed } from "vue";
-import { useWindowScroll } from "@vueuse/core";
+import { useWindowScroll, useWindowSize } from "@vueuse/core";
 
 const { y } = useWindowScroll();
 const imageVisible = ref(false);
+const { width } = useWindowSize();
+const isMobile = ref(width.value < 768);
+
+console.log("isMobile", isMobile.value);
+console.log("width", width.value);
 
 function handleImageLoad() {
-  setTimeout(() => {
-    imageVisible.value = true;
-  }, 100);
+  imageVisible.value = true;
 }
 
-const parallaxStyle = computed(() => ({
-  transform: `translateY(-${y.value * 0.3}px)`,
-}));
+const parallaxStyle = computed(() => {
+  return !isMobile.value
+    ? { transform: `translateY(-${y.value * 0.3}px)` }
+    : {};
+});
 </script>
 
 <template>
   <div class="hero-container relative h-[112vh] w-full bg-rose overflow-hidden">
-    <div
-      ref="imageRef"
-      class="absolute top-[10%] left-0 w-full h-[120%] transition-transform duration-700 ease-out"
-      :class="{
-        'translate-y-[100vh] opacity-0': !imageVisible,
-        'translate-y-0 opacity-100': imageVisible,
-      }"
-      :style="parallaxStyle"
-    >
-      <NuxtImg
-        src="/images/software-35.webp"
-        class="w-full h-full object-cover hidden md:inline-block"
-        alt="Homepage Image"
-        format="webp"
-        quality="100"
-        @load="handleImageLoad"
-      />
-    </div>
-
+    <ClientOnly>
+      <div
+        v-if="!isMobile"
+        ref="imageRef"
+        class="absolute top-[10%] left-0 w-full h-[120%] transition-transform duration-700 ease-out"
+        :class="{
+          'translate-y-[100vh] opacity-0': !imageVisible,
+          'translate-y-0 opacity-100': imageVisible,
+        }"
+        :style="parallaxStyle"
+      >
+        <NuxtImg
+          src="/images/software-35.webp"
+          class="w-full h-full object-cover"
+          alt="Homepage Image"
+          format="webp"
+          quality="100"
+          @load="handleImageLoad"
+        />
+      </div>
+    </ClientOnly>
     <div
       class="hero-content absolute z-10 flex items-center justify-center left-1/2 top-[45vh] -translate-x-1/2 -translate-y-1/2"
     >
-      <div class="w-3/4 text-5xl md:text-6xl text-center font-bold">
+      <div class="text-5xl md:text-6xl text-center font-bold">
         <h1 class="empower-text rounded-xl text-rose p-2">Empower</h1>
         <h1>your online vision.</h1>
         <MotionButton scrollTo="our-services">Explore</MotionButton>
@@ -98,7 +104,12 @@ const parallaxStyle = computed(() => ({
   left: -101%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(120deg, transparent, var(--color-foam), transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    var(--color-foam),
+    transparent
+  );
   animation: slideMask 1s alternate 2;
 }
 </style>
