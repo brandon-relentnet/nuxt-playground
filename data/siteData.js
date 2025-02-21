@@ -115,11 +115,6 @@ export const navItemsData = [
         dropdown: false,
         url: "#",
     },
-    {
-        label: "Contact",
-        dropdown: false,
-        url: "#",
-    },
 ];
 
 // Services provided data

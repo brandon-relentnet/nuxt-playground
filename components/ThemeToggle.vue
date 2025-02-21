@@ -16,7 +16,7 @@ onMounted(() => {
       v-if="mounted"
       v-motion-button
       @click="themeStore.toggle"
-      class="px-4 py-2 rounded-xl cursor-pointer text-subtle hover:text-text hover:bg-surface"
+      class="px-4 py-2 rounded-xl cursor-pointer text-subtle hover:text-text hover:bg-surface transition-colors duration-200"
     >
       <transition name="scale" mode="out-in">
         <MoonIcon v-if="themeStore.mode === 'dark'" class="size-6" key="moon" />

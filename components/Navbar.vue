@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import autoAnimate from "@formkit/auto-animate";
-import { PlayIcon } from "@heroicons/vue/24/solid";
+import { PlayIcon, PhoneIcon } from "@heroicons/vue/24/solid";
 import { navItemsData } from "~/data/siteData";
 
 const navItems = ref(navItemsData);
@@ -28,8 +28,24 @@ function closeDropdown(item) {
 
 <template>
   <div class="relative w-full h-20">
-    <nav class="bg-base text-lg text-text fixed top-0 left-0 w-full z-50 px-8">
+    <nav
+      class="bg-base text-lg text-text fixed top-0 left-0 w-full z-50 px-8 flex justify-between items-center"
+      style="font-family: AdamBold, sans-serif"
+    >
       <ul class="flex space-x-4 items-center h-20">
+        <NuxtLink
+          to="/"
+          class="hover:bg-surface rounded-xl px-4 py-2 transition-colors duration-200"
+        >
+          <NuxtImg
+            src="/images/relentnet-logo.png"
+            alt="RelentNet Logo"
+            quality="100"
+            width="48"
+            height="48"
+            format="webp"
+          />
+        </NuxtLink>
         <li v-for="(item, index) in navItems" :key="index" class="relative">
           <template v-if="item.dropdown">
             <div v-on-click-outside.bubble="() => closeDropdown(item)">
@@ -40,7 +56,7 @@ function closeDropdown(item) {
               >
                 {{ item.label }}
                 <PlayIcon
-                  class="size-3 inline-block -rotate-90 transition duration-200"
+                  class="size-3 inline-block -rotate-90 transition duration-200 mb-0.5"
                   :class="{ 'rotate-90': item.open }"
                 />
               </button>
@@ -73,7 +89,9 @@ function closeDropdown(item) {
                           :is="link.icon"
                           class="size-6 text-rose inline-block mr-2 -mt-0.5"
                         />
-                        <span class="group-hover:text-foam">{{ link.label }}</span>
+                        <span class="group-hover:text-foam">{{
+                          link.label
+                        }}</span>
                       </NuxtLink>
                     </ul>
                   </div>
@@ -91,12 +109,19 @@ function closeDropdown(item) {
           </template>
         </li>
       </ul>
+      <div class="flex items-center">
+        <NuxtLink
+          v-motion-button
+          to="/contact"
+          class="px-4 py-2 rounded-xl cursor-pointer text-subtle hover:text-text hover:bg-surface transition-colors duration-200"
+          style="visibility: hidden; transform: scale(0)"
+        >
+          <PhoneIcon class="size-6" />
+        </NuxtLink>
+        <div class="flex justify-center items-center size-8">
+          <ThemeToggle />
+        </div>
+      </div>
     </nav>
   </div>
 </template>
-
-<style scoped>
-nav {
-  font-family: "AdamBold", sans-serif;
-}
-</style>
