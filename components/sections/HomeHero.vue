@@ -5,10 +5,7 @@ import { useWindowScroll, useWindowSize } from "@vueuse/core";
 const { y } = useWindowScroll();
 const imageVisible = ref(false);
 const { width } = useWindowSize();
-const isMobile = ref(width.value < 768);
-
-console.log("isMobile", isMobile.value);
-console.log("width", width.value);
+const isMobile = computed(() => width.value < 768);
 
 function handleImageLoad() {
   imageVisible.value = true;
@@ -22,15 +19,15 @@ const parallaxStyle = computed(() => {
 </script>
 
 <template>
-  <div class="hero-container relative h-[112vh] w-full bg-rose overflow-hidden">
+  <div class="relative bg-rose overflow-hidden justify-center h-[92vh]">
     <ClientOnly>
       <div
         v-if="!isMobile"
         ref="imageRef"
-        class="absolute top-[10%] left-0 w-full h-[120%] transition-transform duration-700 ease-out"
+        class="absolute inset-0 h-[130vh] transition-transform duration-700 z-0 ease-out"
         :class="{
           'translate-y-[100vh] opacity-0': !imageVisible,
-          'translate-y-0 opacity-100': imageVisible,
+          'translate-y-[5vh] opacity-100': imageVisible,
         }"
         :style="parallaxStyle"
       >
@@ -39,17 +36,23 @@ const parallaxStyle = computed(() => {
           class="w-full h-full object-cover"
           alt="Homepage Image"
           format="webp"
-          quality="100"
+          quality="80"
           @load="handleImageLoad"
         />
       </div>
     </ClientOnly>
     <div
-      class="hero-content absolute z-10 flex items-center justify-center left-1/2 top-[45vh] -translate-x-1/2 -translate-y-1/2"
+      class="flex relative z-10 items-center mx-auto justify-center radial-gradient w-auto h-full"
     >
-      <div class="text-5xl md:text-6xl text-center font-bold">
-        <h1 class="empower-text rounded-xl text-rose p-2">Empower</h1>
-        <h1>your online vision.</h1>
+      <div class="text-center">
+        <h1
+          class="empower-text text-5xl md:text-6xl font-bold relative italic inline-block overflow-hidden rounded-xl text-rose p-2"
+        >
+          Empower
+        </h1>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl text-center font-bold">
+          your online vision.
+        </h1>
         <MotionButton scrollTo="our-services">Explore</MotionButton>
       </div>
     </div>
@@ -57,31 +60,6 @@ const parallaxStyle = computed(() => {
 </template>
 
 <style scoped>
-.hero-container {
-  position: relative;
-}
-
-.hero-container::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 45vh;
-  transform: translate(-50%, -50%);
-  width: 200vw;
-  height: 200vw;
-  max-width: 200vh;
-  max-height: 200vh;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--color-base) 30%, transparent 70%);
-  z-index: 1;
-  will-change: transform, opacity;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
-
 @keyframes slideMask {
   from {
     transform: translateX(-100%);
@@ -91,17 +69,19 @@ const parallaxStyle = computed(() => {
   }
 }
 
-.empower-text {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
+.radial-gradient {
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--color-base) 35%,
+    transparent 100%
+  );
 }
 
 .empower-text::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -101%;
+  left: -100%;
   width: 100%;
   height: 100%;
   background: linear-gradient(
