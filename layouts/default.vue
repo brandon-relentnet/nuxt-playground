@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt"
   <div>
     <SpeedInsights />
     <header>
-      <Navbar />
+      <NavbarNavbars />
     </header>
     <main>
       <slot />
