@@ -40,40 +40,42 @@ onMounted(() => {
         :class="{ 'rotate-90': item.open }"
       />
     </button>
-    <div
-      ref="dropdownRef"
-      :id="'dropdown-' + item.label.replace(/\s+/g, '-')"
-      class="fixed top-20 left-0 w-full bg-surface shadow-lg dropdown-menu overflow-hidden transition-all duration-300"
-      :class="item.open ? 'h-[275px] p-4' : 'h-0 p-0'"
-    >
+    <div class="fixed top-20 left-0 w-full">
       <div
-        v-if="item.open"
-        class="w-full flex flex-wrap justify-start gap-x-12 px-8"
+        ref="dropdownRef"
+        :id="'dropdown-' + item.label.replace(/\s+/g, '-')"
+        class="absolute top-0 h-[275px] p-4 left-0 w-full origin-top bg-surface shadow-lg dropdown-menu overflow-hidden transition-all duration-300"
+        :class="item.open ? 'scale-y-100' : 'scale-y-0'"
       >
         <div
-          v-for="(section, sIndex) in item.sections"
-          :key="sIndex"
-          class="min-w-[200px] p-4"
+          v-if="item.open"
+          class="w-full flex flex-wrap justify-start gap-x-12 px-8"
         >
-          <SectionTitle>
-            {{ section.sectionLabel }}
-          </SectionTitle>
-          <ul class="gap-y-2 flex flex-col">
-            <NuxtLink
-              v-for="(link, linkIndex) in section.links"
-              :key="linkIndex"
-              class="py-2 group hover:bg-overlay rounded-xl px-4 -ml-4"
-              :to="link.url"
-            >
-              <component
-                :is="link.icon"
-                class="size-6 text-rose inline-block mr-2 -mt-0.5"
-              />
-              <span class="group-hover:text-foam">
-                {{ link.label }}
-              </span>
-            </NuxtLink>
-          </ul>
+          <div
+            v-for="(section, sIndex) in item.sections"
+            :key="sIndex"
+            class="min-w-[200px] p-4"
+          >
+            <SectionTitle>
+              {{ section.sectionLabel }}
+            </SectionTitle>
+            <ul class="gap-y-2 flex flex-col">
+              <NuxtLink
+                v-for="(link, linkIndex) in section.links"
+                :key="linkIndex"
+                class="py-2 group hover:bg-overlay rounded-xl px-4 -ml-4"
+                :to="link.url"
+              >
+                <component
+                  :is="link.icon"
+                  class="size-6 text-rose inline-block mr-2 -mt-0.5"
+                />
+                <span class="group-hover:text-foam">
+                  {{ link.label }}
+                </span>
+              </NuxtLink>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
